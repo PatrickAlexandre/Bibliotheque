@@ -21,32 +21,57 @@
             font-size: 1em;
             color: #666;
         }
+        #search-bar {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Liste des Biais Cognitifs</h1>
+    <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Rechercher un biais..." oninput="filterBiais()">
+    </div>
     <div id="biais-list"></div>
 
     <script>
+        let biaisData = [];
+
+        // Fonction pour afficher les biais
+        function displayBiais(biaisArray) {
+            const biaisList = document.getElementById('biais-list');
+            biaisList.innerHTML = '';
+            biaisArray.forEach(biais => {
+                const biaisDiv = document.createElement('div');
+                biaisDiv.className = 'biais';
+                
+                const title = document.createElement('h2');
+                title.textContent = biais.nom;
+                biaisDiv.appendChild(title);
+
+                const description = document.createElement('p');
+                description.textContent = biais.description;
+                biaisDiv.appendChild(description);
+
+                biaisList.appendChild(biaisDiv);
+            });
+        }
+
+        // Fonction pour filtrer les biais
+        function filterBiais() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const filteredBiais = biaisData.filter(biais => 
+                biais.nom.toLowerCase().includes(searchTerm) || 
+                biais.description.toLowerCase().includes(searchTerm)
+            );
+            displayBiais(filteredBiais);
+        }
+
         // Chargement du fichier JSON
         fetch('180-biais_cognitifs.json')
             .then(response => response.json())
             .then(data => {
-                const biaisList = document.getElementById('biais-list');
-                data.biais_cognitifs.forEach(biais => {
-                    const biaisDiv = document.createElement('div');
-                    biaisDiv.className = 'biais';
-                    
-                    const title = document.createElement('h2');
-                    title.textContent = biais.nom;
-                    biaisDiv.appendChild(title);
-
-                    const description = document.createElement('p');
-                    description.textContent = biais.description;
-                    biaisDiv.appendChild(description);
-
-                    biaisList.appendChild(biaisDiv);
-                });
+                biaisData = data.biais_cognitifs;
+                displayBiais(biaisData);
             })
             .catch(error => console.error('Erreur de chargement du fichier JSON:', error));
     </script>
