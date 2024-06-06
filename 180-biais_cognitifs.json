@@ -1,0 +1,628 @@
+{
+  "biais_cognitifs": [
+    {
+      "nom": "Biais d'auto-complaisance",
+      "description": "La tendance à attribuer ses succès à des facteurs internes et ses échecs à des facteurs externes."
+    },
+    {
+      "nom": "Biais d'automatisation",
+      "description": "La tendance à dépendre excessivement des systèmes automatisés, ce qui peut conduire à des erreurs lorsque ces systèmes échouent."
+    },
+    {
+      "nom": "Biais d'autorité",
+      "description": "La tendance à attribuer plus de poids et de crédibilité aux opinions des figures d'autorité."
+    },
+    {
+      "nom": "Biais d'auto-handicap",
+      "description": "La tendance à créer des obstacles ou des excuses pour justifier un éventuel échec."
+    },
+    {
+      "nom": "Biais de cadrage",
+      "description": "La tendance à être influencé par la manière dont l'information est présentée plutôt que par l'information elle-même."
+    },
+    {
+      "nom": "Biais de confirmation",
+      "description": "La tendance à rechercher, interpréter et se souvenir des informations qui confirment nos croyances préexistantes."
+    },
+    {
+      "nom": "Biais de conformité",
+      "description": "La tendance à adopter les opinions ou comportements du groupe auquel on appartient."
+    },
+    {
+      "nom": "Biais de croyance",
+      "description": "La tendance à juger la validité des arguments en fonction de la plausibilité de leurs conclusions plutôt que de la logique des arguments eux-mêmes."
+    },
+    {
+      "nom": "Biais de désirabilité sociale",
+      "description": "La tendance à répondre aux questions d'une manière qui sera vue favorablement par les autres."
+    },
+    {
+      "nom": "Biais de disponibilité",
+      "description": "La tendance à estimer la probabilité d'un événement en fonction de la facilité avec laquelle des exemples viennent à l'esprit."
+    },
+    {
+      "nom": "Biais de groupe",
+      "description": "La tendance à favoriser les membres de son propre groupe au détriment des membres des groupes extérieurs."
+    },
+    {
+      "nom": "Biais de négativité",
+      "description": "La tendance à accorder plus d'importance aux expériences négatives qu'aux expériences positives."
+    },
+    {
+      "nom": "Biais de normalité",
+      "description": "La tendance à croire que les choses vont continuer à fonctionner comme elles l'ont toujours fait."
+    },
+    {
+      "nom": "Biais de représentativité",
+      "description": "La tendance à juger la probabilité d'un événement en fonction de la similitude de cet événement avec un prototype existant."
+    },
+    {
+      "nom": "Biais de statu quo",
+      "description": "La tendance à préférer que les choses restent les mêmes plutôt que de changer."
+    },
+    {
+      "nom": "Biais du survivant",
+      "description": "La tendance à se concentrer sur les personnes ou les choses qui ont survécu à un processus de sélection, en négligeant celles qui n'ont pas survécu."
+    },
+    {
+      "nom": "Effet de halo",
+      "description": "La tendance à généraliser une impression favorable ou défavorable d'une personne basée sur une seule caractéristique."
+    },
+    {
+      "nom": "Effet de faux consensus",
+      "description": "La tendance à surestimer le degré auquel les autres partagent nos croyances, attitudes et comportements."
+    },
+    {
+      "nom": "Effet d'ancrage",
+      "description": "La tendance à se fier trop fortement à la première information reçue (l'ancre) lors de la prise de décision."
+    },
+    {
+      "nom": "Effet de contraste",
+      "description": "La tendance à percevoir des stimuli comme étant plus différents les uns des autres lorsqu'ils sont présentés ensemble que lorsqu'ils sont présentés séparément."
+    },
+    {
+      "nom": "Effet Dunning-Kruger",
+      "description": "La tendance des personnes les moins compétentes à surestimer leurs compétences, tandis que les personnes les plus compétentes sous-estiment les leurs."
+    },
+    {
+      "nom": "Effet de récence",
+      "description": "La tendance à mieux se souvenir des informations les plus récentes reçues."
+    },
+    {
+      "nom": "Effet de primauté",
+      "description": "La tendance à mieux se souvenir des premières informations reçues."
+    },
+    {
+      "nom": "Effet d'attente",
+      "description": "La tendance à interpréter les événements en fonction des attentes préalables."
+    },
+    {
+      "nom": "Effet d'homogénéité de l'exogroupe",
+      "description": "La tendance à percevoir les membres des groupes extérieurs comme étant plus homogènes que les membres de son propre groupe."
+    },
+    {
+      "nom": "Biais de positivité",
+      "description": "La tendance à percevoir la vie de manière trop optimiste."
+    },
+    {
+      "nom": "Effet IKEA",
+      "description": "La tendance à accorder plus de valeur aux objets que l'on a partiellement créés soi-même."
+    },
+    {
+      "nom": "Effet de simple exposition",
+      "description": "La tendance à développer une préférence pour les choses simplement parce qu'on y est exposé de manière répétée."
+    },
+    {
+      "nom": "Effet de dotation",
+      "description": "La tendance à accorder plus de valeur aux objets que l'on possède par rapport à ceux que l'on ne possède pas."
+    },
+    {
+      "nom": "Biais de projection",
+      "description": "La tendance à supposer que les autres partagent les mêmes croyances, pensées et sentiments que soi-même."
+    },
+    {
+      "nom": "Biais rétrospectif",
+      "description": "La tendance à voir les événements passés comme étant plus prévisibles qu'ils ne l'étaient réellement."
+    },
+    {
+      "nom": "Biais de proportionnalité",
+      "description": "La tendance à croire que les grandes causes ont des effets proportionnellement grands."
+    },
+    {
+      "nom": "Biais de sélection",
+      "description": "La tendance à inclure ou exclure des données d'une manière qui fausse les résultats d'une analyse."
+    },
+    {
+      "nom": "Biais de complaisance",
+      "description": "La tendance à favoriser les informations ou les personnes qui nous sont familières ou agréables."
+    },
+    {
+      "nom": "Biais de complaisance excessive",
+      "description": "La tendance à adopter les opinions ou comportements des autres pour obtenir leur approbation."
+    },
+    {
+      "nom": "Biais d'optimisme",
+      "description": "La tendance à être trop optimiste sur les résultats futurs et à sous-estimer les risques."
+    },
+    {
+      "nom": "Effet de désinformation",
+      "description": "La tendance à intégrer des informations incorrectes dans ses souvenirs d'un événement."
+    },
+    {
+      "nom": "Effet d'illusion de contrôle",
+      "description": "La tendance à croire que l'on peut contrôler ou influencer des événements sur lesquels on n'a aucun pouvoir."
+    },
+    {
+      "nom": "Effet Barnum",
+      "description": "La tendance à accepter des descriptions vagues ou générales comme s'appliquant spécifiquement à soi-même."
+    },
+    {
+      "nom": "Effet Forer",
+      "description": "La tendance à accepter des descriptions générales de la personnalité comme étant spécifiquement applicables à soi-même."
+    },
+    {
+      "nom": "Biais de dissonance cognitive",
+      "description": "La tendance à ressentir un inconfort mental lorsqu'on est confronté à des informations ou des croyances contradictoires."
+    },
+    {
+      "nom": "Biais de continuité",
+      "description": "La tendance à percevoir une séquence continue dans des événements discontinus."
+    },
+    {
+      "nom": "Biais d'illusion de transparence",
+      "description": "La tendance à surestimer la mesure dans laquelle ses pensées, sentiments et attitudes sont perçus par les autres."
+    },
+    {
+      "nom": "Effet de supériorité de l'image",
+      "description": "La tendance à se souvenir des images mieux que des mots."
+    },
+    {
+      "nom": "Effet de placebo",
+      "description": "La tendance à ressentir une amélioration de l'état de santé en raison de la croyance en l'efficacité d'un traitement inerte."
+    },
+    {
+      "nom": "Biais d'illusion de fréquence",
+      "description": "La tendance à voir une nouvelle information ou un nouvel objet partout après l'avoir appris ou découvert pour la première fois."
+    },
+    {
+      "nom": "Biais de réactance",
+      "description": "La tendance à agir de manière opposée à ce qui est perçu comme une restriction de la liberté."
+    },
+    {
+      "nom": "Effet Pygmalion",
+      "description": "La tendance à ce que les attentes élevées des autres améliorent les performances d'un individu."
+    },
+    {
+      "nom": "Effet Golem",
+      "description": "La tendance à ce que les faibles attentes des autres réduisent les performances d'un individu."
+    },
+    {
+      "nom": "Biais de rentabilité",
+      "description": "La tendance à sous-estimer le coût et le temps nécessaires pour réaliser un projet."
+    },
+    {
+      "nom": "Effet de leurre",
+      "description": "La tendance à changer de préférence entre deux options lorsqu'une troisième option, asymétriquement dominée, est présentée."
+    },
+    {
+      "nom": "Effet de projecteur",
+      "description": "La tendance à surestimer le degré auquel nos actions et apparences sont remarquées par les autres."
+    },
+    {
+      "nom": "Effet de mouton",
+      "description": "La tendance à suivre le comportement d'un groupe."
+    },
+    {
+      "nom": "Effet de mode",
+      "description": "La tendance à adopter un comportement ou un style parce qu'il est populaire ou à la mode."
+    },
+    {
+      "nom": "Effet de l'aiguille dans la botte de foin",
+      "description": "La tendance à ne pas remarquer une anomalie ou une erreur lorsqu'elle est noyée dans une grande quantité d'informations."
+    },
+    {
+      "nom": "Biais d'endogroupe",
+      "description": "La tendance à favoriser les membres de son propre groupe par rapport à ceux des groupes extérieurs."
+    },
+    {
+      "nom": "Biais de stéréotype",
+      "description": "La tendance à attribuer des caractéristiques généralisées à des individus en fonction de leur appartenance à un groupe."
+    },
+    {
+      "nom": "Biais de faux souvenir",
+      "description": "La tendance à se souvenir de choses qui ne se sont pas produites ou à se souvenir de manière incorrecte."
+    },
+    {
+      "nom": "Biais d'optimisme comparatif",
+      "description": "La tendance à croire que l'on est moins susceptible d'expérimenter des événements négatifs par rapport aux autres."
+    },
+    {
+      "nom": "Biais de l'illusion de savoir",
+      "description": "La tendance à croire que l'on comprend mieux un sujet qu'on ne le fait réellement."
+    },
+    {
+      "nom": "Effet du perdant",
+      "description": "La tendance à continuer à investir dans une cause perdue."
+    },
+    {
+      "nom": "Effet de familiarité",
+      "description": "La tendance à préférer les choses simplement parce qu'elles nous sont familières."
+    },
+    {
+      "nom": "Effet de positivité",
+      "description": "La tendance à se souvenir des événements agréables plus facilement que des événements désagréables."
+    },
+    {
+      "nom": "Effet de dotation",
+      "description": "La tendance à accorder plus de valeur aux objets que l'on possède par rapport à ceux que l'on ne possède pas."
+    },
+    {
+      "nom": "Effet de surconfiance",
+      "description": "La tendance à surestimer ses propres capacités et jugements."
+    },
+    {
+      "nom": "Effet de perspective",
+      "description": "La tendance à croire que les autres voient les choses de la même manière que nous."
+    },
+    {
+      "nom": "Biais de disqualification du positif",
+      "description": "La tendance à ignorer ou rejeter les expériences positives."
+    },
+    {
+      "nom": "Effet d'accentuation",
+      "description": "La tendance à exagérer les différences entre les catégories."
+    },
+    {
+      "nom": "Effet de réflecteur",
+      "description": "La tendance à surestimer l'impact de ses propres actions sur les autres."
+    },
+    {
+      "nom": "Biais d'illusion de traitement",
+      "description": "La tendance à croire qu'un traitement est efficace simplement parce qu'il a été administré."
+    },
+    {
+      "nom": "Biais de substitution",
+      "description": "La tendance à substituer une question complexe par une question plus simple."
+    },
+    {
+      "nom": "Effet de disposition",
+      "description": "La tendance à vendre les actifs qui ont augmenté en valeur et à conserver ceux qui ont baissé."
+    },
+    {
+      "nom": "Biais d'illusion de validité",
+      "description": "La tendance à croire que ses jugements et prédictions sont corrects malgré des preuves du contraire."
+    },
+    {
+      "nom": "Effet de halo inverse",
+      "description": "La tendance à généraliser une impression défavorable d'une personne basée sur une seule caractéristique négative."
+    },
+    {
+      "nom": "Effet d'exposition à la simple information",
+      "description": "La tendance à préférer quelque chose simplement parce qu'on y est exposé de manière répétée."
+    },
+    {
+      "nom": "Biais de spécificité",
+      "description": "La tendance à exiger des niveaux de preuve plus élevés pour les affirmations qui vont à l'encontre de ses croyances."
+    },
+    {
+      "nom": "Biais de contamination",
+      "description": "La tendance à être influencé par des informations non pertinentes lors de la prise de décision."
+    },
+    {
+      "nom": "Effet de rime",
+      "description": "La tendance à considérer les phrases qui riment comme étant plus vraies ou plus précises."
+    },
+    {
+      "nom": "Effet de dilution",
+      "description": "La tendance à diminuer l'importance des informations pertinentes en présence d'informations non pertinentes."
+    },
+    {
+      "nom": "Biais de conformité",
+      "description": "La tendance à adopter les opinions ou comportements du groupe auquel on appartient."
+    },
+    {
+      "nom": "Effet de clarté",
+      "description": "La tendance à préférer les informations présentées de manière claire et concise."
+    },
+    {
+      "nom": "Biais de complexité",
+      "description": "La tendance à surestimer la valeur des solutions complexes par rapport aux solutions simples."
+    },
+    {
+      "nom": "Biais de consistance",
+      "description": "La tendance à croire que les autres sont plus consistants dans leurs attitudes, croyances et comportements qu'ils ne le sont réellement."
+    },
+    {
+      "nom": "Biais de focalisation",
+      "description": "La tendance à se concentrer sur un seul aspect d'un événement ou d'une situation."
+    },
+    {
+      "nom": "Effet de continuité",
+      "description": "La tendance à percevoir des séquences continues dans des événements discontinus."
+    },
+    {
+      "nom": "Biais de distinction",
+      "description": "La tendance à exagérer les différences entre les objets ou les événements lorsqu'on les compare."
+    },
+    {
+      "nom": "Biais de fausse unicité",
+      "description": "La tendance à sous-estimer le nombre de personnes partageant ses propres capacités et traits désirables."
+    },
+    {
+      "nom": "Effet de familiarité",
+      "description": "La tendance à préférer les choses simplement parce qu'elles nous sont familières."
+    },
+    {
+      "nom": "Biais de frugalité",
+      "description": "La tendance à préférer les options les plus simples et les moins coûteuses en termes de temps, d'efforts ou d'argent."
+    },
+    {
+      "nom": "Effet de génération",
+      "description": "La tendance à mieux se souvenir des informations que l'on a générées soi-même que de celles que l'on a simplement lues."
+    },
+    {
+      "nom": "Effet de heuristique",
+      "description": "La tendance à utiliser des règles de décision simplifiées pour faire des jugements complexes."
+    },
+    {
+      "nom": "Effet de hôte-invité",
+      "description": "La tendance à sous-estimer la compréhension ou l'intérêt des autres pour un sujet particulier."
+    },
+    {
+      "nom": "Effet de la simple exposition",
+      "description": "La tendance à préférer les choses simplement parce qu'on y est exposé de manière répétée."
+    },
+    {
+      "nom": "Effet de la surcompensation",
+      "description": "La tendance à surestimer la probabilité que les autres corrigent leurs erreurs."
+    },
+    {
+      "nom": "Effet de la troisième personne",
+      "description": "La tendance à croire que les autres sont plus influencés par les médias que soi-même."
+    },
+    {
+      "nom": "Effet de l'ambiguïté",
+      "description": "La tendance à éviter les options dont la probabilité de résultats est inconnue."
+    },
+    {
+      "nom": "Effet de levier",
+      "description": "La tendance à se concentrer sur des informations spécifiques et ignorées pour formuler des jugements globaux."
+    },
+    {
+      "nom": "Effet de projection",
+      "description": "La tendance à projeter ses propres pensées et sentiments sur les autres."
+    },
+    {
+      "nom": "Effet de raisonnement motivé",
+      "description": "La tendance à utiliser le raisonnement pour arriver à la conclusion souhaitée plutôt que de rechercher la vérité."
+    },
+    {
+      "nom": "Effet de rime",
+      "description": "La tendance à considérer les phrases qui riment comme étant plus vraies ou plus précises."
+    },
+    {
+      "nom": "Effet de simplicité",
+      "description": "La tendance à préférer les explications simples aux explications complexes."
+    },
+    {
+      "nom": "Effet de source",
+      "description": "La tendance à évaluer la crédibilité d'une information en fonction de sa source."
+    },
+    {
+      "nom": "Effet de stabilité",
+      "description": "La tendance à croire que les choses ne changent pas avec le temps."
+    },
+    {
+      "nom": "Effet de surcharge cognitive",
+      "description": "La tendance à faire des erreurs ou à prendre des décisions moins bonnes lorsque la charge cognitive est élevée."
+    },
+    {
+      "nom": "Effet de sous-estimation",
+      "description": "La tendance à sous-estimer la probabilité ou la magnitude des événements futurs."
+    },
+    {
+      "nom": "Effet de supériorité illusoire",
+      "description": "La tendance à se voir soi-même comme étant meilleur que la moyenne."
+    },
+    {
+      "nom": "Effet de surapprentissage",
+      "description": "La tendance à mieux se souvenir des informations après des périodes de pratique continue."
+    },
+    {
+      "nom": "Effet de tendance centrale",
+      "description": "La tendance à éviter les extrêmes lors de la prise de décision ou de l'évaluation."
+    },
+    {
+      "nom": "Effet de valorisation du passé",
+      "description": "La tendance à voir le passé de manière plus positive qu'il ne l'était réellement."
+    },
+    {
+      "nom": "Effet de variabilité",
+      "description": "La tendance à surestimer la variabilité des autres et à sous-estimer la variabilité de soi-même."
+    },
+    {
+      "nom": "Effet du cadrage",
+      "description": "La tendance à être influencé par la manière dont l'information est présentée plutôt que par l'information elle-même."
+    },
+    {
+      "nom": "Effet du consensus faux",
+      "description": "La tendance à surestimer le degré auquel les autres partagent nos croyances, attitudes et comportements."
+    },
+    {
+      "nom": "Effet du contraste",
+      "description": "La tendance à percevoir des stimuli comme étant plus différents les uns des autres lorsqu'ils sont présentés ensemble que lorsqu'ils sont présentés séparément."
+    },
+    {
+      "nom": "Effet du coût irrécupérable",
+      "description": "La tendance à continuer à investir dans une cause perdue en raison des investissements passés."
+    },
+    {
+      "nom": "Effet du dénominateur commun",
+      "description": "La tendance à se concentrer sur les similitudes entre les options plutôt que sur leurs différences."
+    },
+    {
+      "nom": "Effet du faux espoir",
+      "description": "La tendance à croire que les choses vont s'améliorer, même en l'absence de preuves."
+    },
+    {
+      "nom": "Effet du gain à court terme",
+      "description": "La tendance à privilégier les gains à court terme au détriment des gains à long terme."
+    },
+    {
+      "nom": "Effet du groupe témoin",
+      "description": "La tendance à croire que les résultats d'un groupe témoin s'appliquent à l'ensemble de la population."
+    },
+    {
+      "nom": "Effet du heuristique de disponibilité",
+      "description": "La tendance à estimer la probabilité d'un événement en fonction de la facilité avec laquelle des exemples viennent à l'esprit."
+    },
+    {
+      "nom": "Effet du mode",
+      "description": "La tendance à adopter un comportement ou un style parce qu'il est populaire ou à la mode."
+    },
+    {
+      "nom": "Effet du paternalisme",
+      "description": "La tendance à croire que les autres ont besoin de notre aide ou de notre protection."
+    },
+    {
+      "nom": "Effet du placement produit",
+      "description": "La tendance à être influencé par les produits placés dans les médias."
+    },
+    {
+      "nom": "Effet du point de référence",
+      "description": "La tendance à évaluer les résultats en fonction d'un point de référence plutôt qu'en termes absolus."
+    },
+    {
+      "nom": "Effet du préjudice",
+      "description": "La tendance à être influencé par ses propres préjugés lors de la prise de décision."
+    },
+    {
+      "nom": "Effet du rationalisme naïf",
+      "description": "La tendance à croire que les autres sont rationnels et logiques dans leurs actions."
+    },
+    {
+      "nom": "Effet du rareté",
+      "description": "La tendance à accorder plus de valeur aux choses rares ou limitées."
+    },
+    {
+      "nom": "Effet du reflet",
+      "description": "La tendance à surestimer l'impact de ses propres actions sur les autres."
+    },
+    {
+      "nom": "Effet du renforcement",
+      "description": "La tendance à préférer les informations qui renforcent ses croyances existantes."
+    },
+    {
+      "nom": "Effet du repli",
+      "description": "La tendance à revenir à une moyenne après des résultats extrêmes."
+    },
+    {
+      "nom": "Effet du risque zéro",
+      "description": "La tendance à préférer les options avec aucun risque même si elles ne sont pas les meilleures."
+    },
+    {
+      "nom": "Effet du statu quo",
+      "description": "La tendance à préférer que les choses restent les mêmes plutôt que de changer."
+    },
+    {
+      "nom": "Effet du stéréotype",
+      "description": "La tendance à attribuer des caractéristiques généralisées à des individus en fonction de leur appartenance à un groupe."
+    },
+    {
+      "nom": "Effet du tranchant",
+      "description": "La tendance à se concentrer sur les éléments les plus frappants ou les plus visibles d'une situation."
+    },
+    {
+      "nom": "Effet du trop grand choix",
+      "description": "La tendance à être paralysé par un trop grand nombre de choix."
+    },
+    {
+      "nom": "Effet du vernis",
+      "description": "La tendance à se concentrer sur les aspects superficiels d'une situation ou d'un produit."
+    },
+    {
+      "nom": "Effet du zèle",
+      "description": "La tendance à travailler plus dur ou à faire plus d'efforts pour atteindre un objectif."
+    },
+    {
+      "nom": "Effet d'unité",
+      "description": "La tendance à percevoir les groupes ou les objets comme étant plus unifiés qu'ils ne le sont réellement."
+    },
+    {
+      "nom": "Effet Zenon",
+      "description": "La tendance à ce que des événements se produisent plus lentement ou pas du tout lorsqu'ils sont observés."
+    },
+    {
+      "nom": "Erreur d'attribution fondamentale",
+      "description": "La tendance à attribuer les comportements des autres à des traits de personnalité plutôt qu'à des facteurs situationnels."
+    },
+    {
+      "nom": "Erreur de continuité",
+      "description": "La tendance à percevoir une continuité dans les événements discontinus."
+    },
+    {
+      "nom": "Erreur de planification",
+      "description": "La tendance à sous-estimer le temps, les coûts et les risques d'un projet tout en surestimant les bénéfices."
+    },
+    {
+      "nom": "Illusion de contrôle",
+      "description": "La tendance à croire que l'on peut contrôler ou influencer des événements sur lesquels on n'a aucun pouvoir."
+    },
+    {
+      "nom": "Illusion de transparence",
+      "description": "La tendance à surestimer la mesure dans laquelle ses pensées, sentiments et attitudes sont perçus par les autres."
+    },
+    {
+      "nom": "Illusion de validité",
+      "description": "La tendance à croire que ses jugements et prédictions sont corrects malgré des preuves du contraire."
+    },
+    {
+      "nom": "Illusion d'attention",
+      "description": "La tendance à croire que l'on prête attention à plus de choses qu'on ne le fait réellement."
+    },
+    {
+      "nom": "Illusion d'invulnérabilité",
+      "description": "La tendance à croire que l'on est moins susceptible de subir des événements négatifs que les autres."
+    },
+    {
+      "nom": "Illusion d'invulnérabilité comparative",
+      "description": "La tendance à croire que l'on est moins vulnérable aux risques par rapport aux autres."
+    },
+    {
+      "nom": "Illusion d'invulnérabilité personnelle",
+      "description": "La tendance à croire que l'on est personnellement invulnérable aux risques."
+    },
+    {
+      "nom": "Illusion de fréquence",
+      "description": "La tendance à voir une nouvelle information ou un nouvel objet partout après l'avoir appris ou découvert pour la première fois."
+    },
+    {
+      "nom": "Illusion de grandeur",
+      "description": "La tendance à se voir soi-même comme étant plus important ou plus talentueux qu'on ne l'est réellement."
+    },
+    {
+      "nom": "Illusion de savoir",
+      "description": "La tendance à croire que l'on comprend mieux un sujet qu'on ne le fait réellement."
+    },
+    {
+      "nom": "Illusion de traitement",
+      "description": "La tendance à croire qu'un traitement est efficace simplement parce qu'il a été administré."
+    },
+    {
+      "nom": "Illusion de validité",
+      "description": "La tendance à croire que ses jugements et prédictions sont corrects malgré des preuves du contraire."
+    },
+    {
+      "nom": "Phénomène de l'objectivité illusoire",
+      "description": "La tendance à croire que ses opinions et jugements sont plus objectifs et moins biaisés que ceux des autres."
+    },
+    {
+      "nom": "Phénomène du chiffre magique",
+      "description": "La tendance à accorder une importance particulière à certains chiffres ou nombres."
+    },
+    {
+      "nom": "Syndrome de la pensée de groupe",
+      "description": "La tendance à privilégier l'harmonie et la cohésion du groupe au détriment de la prise de décision rationnelle."
+    }
+  ]
+}

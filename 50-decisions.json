@@ -1,0 +1,252 @@
+[
+    {
+        "model_id": 1,
+        "title": "Le modèle du cadrage",
+        "description": "Utilisé pour définir clairement un problème ou une opportunité avant de passer à la recherche de solutions."
+    },
+    {
+        "model_id": 2,
+        "title": "L'analyse SWOT",
+        "description": "Utilisé pour identifier les forces, faiblesses, opportunités et menaces d'une organisation ou d'un projet."
+    },
+    {
+        "model_id": 3,
+        "title": "La matrice BCG",
+        "description": "Utilisé pour évaluer le portefeuille de produits d'une entreprise en fonction de leur taux de croissance et de leur part de marché."
+    },
+    {
+        "model_id": 4,
+        "title": "Le modèle des 5 forces de Porter",
+        "description": "Utilisé pour analyser la concurrence au sein d'une industrie en examinant cinq forces clés."
+    },
+    {
+        "model_id": 5,
+        "title": "Le modèle de la chaîne de valeur",
+        "description": "Utilisé pour identifier les activités qui créent de la valeur pour une entreprise et optimiser celles-ci."
+    },
+    {
+        "model_id": 6,
+        "title": "Le diagramme de Pareto",
+        "description": "Utilisé pour identifier les causes les plus importantes d'un problème, en se concentrant sur les éléments qui ont le plus grand impact."
+    },
+    {
+        "model_id": 7,
+        "title": "L'analyse des parties prenantes",
+        "description": "Utilisé pour identifier et évaluer les intérêts des différentes parties prenantes dans un projet ou une décision."
+    },
+    {
+        "model_id": 8,
+        "title": "La matrice d'Eisenhower",
+        "description": "Utilisé pour aider à prioriser les tâches en fonction de leur urgence et de leur importance."
+    },
+    {
+        "model_id": 9,
+        "title": "Le modèle de la roue de Deming",
+        "description": "Utilisé pour l'amélioration continue des processus en suivant le cycle Plan-Do-Check-Act (PDCA)."
+    },
+    {
+        "model_id": 10,
+        "title": "Le brainstorming",
+        "description": "Utilisé pour générer un grand nombre d'idées dans un court laps de temps par la collaboration."
+    },
+    {
+        "model_id": 11,
+        "title": "Le diagramme de Gantt",
+        "description": "Utilisé pour planifier et suivre les étapes d'un projet en visualisant les tâches sur une échelle de temps."
+    },
+    {
+        "model_id": 12,
+        "title": "Le modèle de la matrice RACI",
+        "description": "Utilisé pour clarifier les rôles et les responsabilités au sein d'une équipe ou d'un projet."
+    },
+    {
+        "model_id": 13,
+        "title": "L'analyse PESTEL",
+        "description": "Utilisé pour analyser les influences macro-environnementales sur une organisation en examinant les facteurs politiques, économiques, sociaux, technologiques, environnementaux et légaux."
+    },
+    {
+        "model_id": 14,
+        "title": "Le modèle des 4P du marketing",
+        "description": "Utilisé pour élaborer une stratégie marketing en se concentrant sur le Produit, le Prix, la Place et la Promotion."
+    },
+    {
+        "model_id": 15,
+        "title": "La méthode des 5 pourquoi",
+        "description": "Utilisé pour identifier la cause profonde d'un problème en posant la question 'Pourquoi?' à plusieurs reprises."
+    },
+    {
+        "model_id": 16,
+        "title": "Le modèle des scénarios",
+        "description": "Utilisé pour anticiper les futurs possibles et préparer des stratégies en fonction de différents scénarios."
+    },
+    {
+        "model_id": 17,
+        "title": "L'analyse coût-bénéfice",
+        "description": "Utilisé pour évaluer la viabilité économique d'un projet ou d'une décision en comparant les coûts et les bénéfices attendus."
+    },
+    {
+        "model_id": 18,
+        "title": "Le modèle de la matrice de décision",
+        "description": "Utilisé pour évaluer et comparer différentes options en fonction de critères pondérés."
+    },
+    {
+        "model_id": 19,
+        "title": "Le modèle du cycle de vie du produit",
+        "description": "Utilisé pour gérer les différentes étapes de la vie d'un produit, de son développement à son déclin."
+    },
+    {
+        "model_id": 20,
+        "title": "Le modèle de la carte mentale",
+        "description": "Utilisé pour organiser visuellement les informations et les idées autour d'un concept central."
+    },
+    {
+        "model_id": 21,
+        "title": "L'analyse des écarts",
+        "description": "Utilisé pour identifier la différence entre la situation actuelle et les objectifs futurs."
+    },
+    {
+        "model_id": 22,
+        "title": "Le modèle des forces de gravité",
+        "description": "Utilisé pour comprendre les attractions et répulsions dans les relations interpersonnelles ou inter-organisationnelles."
+    },
+    {
+        "model_id": 23,
+        "title": "Le modèle de Kano",
+        "description": "Utilisé pour classer les attributs d'un produit ou service en fonction de leur impact sur la satisfaction des clients."
+    },
+    {
+        "model_id": 24,
+        "title": "Le modèle des six chapeaux",
+        "description": "Utilisé pour explorer une décision ou un problème sous différents angles de réflexion."
+    },
+    {
+        "model_id": 25,
+        "title": "La méthode des cas",
+        "description": "Utilisé pour analyser et résoudre des problèmes complexes en utilisant des études de cas réelles ou fictives."
+    },
+    {
+        "model_id": 26,
+        "title": "L'analyse de la chaîne d'approvisionnement",
+        "description": "Utilisé pour optimiser les flux de biens et services depuis les fournisseurs jusqu'aux clients."
+    },
+    {
+        "model_id": 27,
+        "title": "Le modèle des courbes en S",
+        "description": "Utilisé pour comprendre les phases de croissance et de maturité dans les processus ou les innovations."
+    },
+    {
+        "model_id": 28,
+        "title": "Le modèle de la matrice de croissance",
+        "description": "Utilisé pour élaborer des stratégies de croissance en fonction des parts de marché et des taux de croissance."
+    },
+    {
+        "model_id": 29,
+        "title": "Le modèle de la roue des compétences",
+        "description": "Utilisé pour identifier et développer les compétences nécessaires pour atteindre les objectifs professionnels."
+    },
+    {
+        "model_id": 30,
+        "title": "Le diagramme de Venn",
+        "description": "Utilisé pour illustrer les relations entre différents ensembles et identifier les zones de chevauchement."
+    },
+    {
+        "model_id": 31,
+        "title": "Le modèle de la matrice d'impact",
+        "description": "Utilisé pour évaluer l'impact potentiel des décisions et identifier les actions prioritaires."
+    },
+    {
+        "model_id": 32,
+        "title": "Le modèle de l'iceberg",
+        "description": "Utilisé pour explorer les aspects visibles et cachés d'une situation ou d'un problème."
+    },
+    {
+        "model_id": 33,
+        "title": "Le modèle des cercles de qualité",
+        "description": "Utilisé pour améliorer la qualité et l'efficacité par la collaboration en petits groupes."
+    },
+    {
+        "model_id": 34,
+        "title": "Le modèle des 7S de McKinsey",
+        "description": "Utilisé pour analyser et améliorer la performance organisationnelle en examinant sept éléments interconnectés."
+    },
+    {
+        "model_id": 35,
+        "title": "Le modèle de la matrice de gestion du temps",
+        "description": "Utilisé pour optimiser la gestion du temps en classant les activités selon leur importance et urgence."
+    },
+    {
+        "model_id": 36,
+        "title": "Le modèle des niveaux logiques de Dilts",
+        "description": "Utilisé pour comprendre et influencer le changement à différents niveaux (environnement, comportement, capacités, croyances, identité, spiritualité)."
+    },
+    {
+        "model_id": 37,
+        "title": "Le modèle des 4C",
+        "description": "Utilisé pour évaluer la performance d'une équipe en se concentrant sur la communication, la collaboration, la créativité et la pensée critique."
+    },
+    {
+        "model_id": 38,
+        "title": "Le modèle de l'étoile de Leavitt",
+        "description": "Utilisé pour analyser les interactions entre la structure, la technologie, les individus et les tâches au sein d'une organisation."
+    },
+    {
+        "model_id": 39,
+        "title": "Le modèle des rôles de Belbin",
+        "description": "Utilisé pour identifier les rôles des membres d'une équipe et améliorer la dynamique de groupe."
+    },
+    {
+        "model_id": 40,
+        "title": "Le modèle du triangle de projet",
+        "description": "Utilisé pour gérer les contraintes de temps, de coût et de qualité dans la gestion de projet."
+    },
+    {
+        "model_id": 41,
+        "title": "L'analyse de la courbe de Lorenz",
+        "description": "Utilisé pour analyser la répartition des ressources ou des revenus au sein d'une population."
+    },
+    {
+        "model_id": 42,
+        "title": "Le modèle de la boussole stratégique",
+        "description": "Utilisé pour orienter les décisions stratégiques en fonction de différents axes de performance."
+    },
+    {
+        "model_id": 43,
+        "title": "Le modèle de l'arbre des causes",
+        "description": "Utilisé pour explorer et identifier les causes profondes d'un problème complexe."
+    },
+    {
+        "model_id": 44,
+        "title": "Le modèle de la carte de chaleur",
+        "description": "Utilisé pour visualiser l'intensité ou la fréquence des événements dans un certain espace ou domaine."
+    },
+    {
+        "model_id": 45,
+        "title": "Le modèle de la pyramide de Maslow",
+        "description": "Utilisé pour comprendre les motivations humaines en hiérarchisant les besoins."
+    },
+    {
+        "model_id": 46,
+        "title": "Le modèle de l'analyse multicritère",
+        "description": "Utilisé pour évaluer et comparer plusieurs options en tenant compte de différents critères de décision."
+    },
+    {
+        "model_id": 47,
+        "title": "Le modèle des cercles concentriques",
+        "description": "Utilisé pour représenter les relations entre différents éléments en les disposant en cercles concentriques."
+    },
+    {
+        "model_id": 48,
+        "title": "Le modèle de l'analyse de sensibilité",
+        "description": "Utilisé pour évaluer l'impact des variations de certains paramètres sur les résultats d'une décision."
+    },
+    {
+        "model_id": 49,
+        "title": "Le modèle de la matrice de Eisenhower",
+        "description": "Utilisé pour prioriser les tâches en fonction de leur importance et de leur urgence."
+    },
+    {
+        "model_id": 50,
+        "title": "Le modèle du cycle PDCA",
+        "description": "Utilisé pour l'amélioration continue des processus en suivant le cycle Plan-Do-Check-Act."
+    }
+]

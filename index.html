@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage des Données JSON avec Filtre et Recherche</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .filter-container {
+            margin-bottom: 10px;
+        }
+        .filter-container input,
+        .filter-container select {
+            margin-right: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Données des fichiers JSON</h1>
+    
+    <div class="filter-container">
+        <input type="text" id="search" placeholder="Rechercher...">
+        <select id="filter-category">
+            <option value="">Sélectionner une catégorie</option>
+            <option value="questions-amour">36 Questions d'Amour</option>
+            <option value="lois-pouvoir">48 Lois du Pouvoir</option>
+            <option value="decisions">50 Modèles de Décision</option>
+            <option value="biais-cognitifs">180 Biais Cognitifs</option>
+            <option value="etapes-imagination">Roue des Étapes Créatrices de l'Imagination</option>
+        </select>
+        <button onclick="applyFilter()">Appliquer le Filtre</button>
+    </div>
+    
+    <section id="questions-amour" class="data-section">
+        <h2>36 Questions d'Amour</h2>
+        <div id="questions-amour-content"></div>
+    </section>
+    <section id="lois-pouvoir" class="data-section">
+        <h2>48 Lois du Pouvoir</h2>
+        <div id="lois-pouvoir-content"></div>
+    </section>
+    <section id="decisions" class="data-section">
+        <h2>50 Modèles de Décision</h2>
+        <div id="decisions-content"></div>
+    </section>
+    <section id="biais-cognitifs" class="data-section">
+        <h2>180 Biais Cognitifs</h2>
+        <div id="biais-cognitifs-content"></div>
+    </section>
+    <section id="etapes-imagination" class="data-section">
+        <h2>Roue des Étapes Créatrices de l'Imagination</h2>
+        <div id="etapes-imagination-content"></div>
+    </section>
+
+    <script>
+        // Function to fetch and display JSON data
+        async function fetchAndDisplayJSON(url, elementId) {
+            const response = await fetch(url);
+            const data = await response.json();
+            document.getElementById(elementId).dataset.content = JSON.stringify(data);
+            displayData(elementId, data);
+        }
+
+        // Function to display data
+        function displayData(elementId, data) {
+            document.getElementById(elementId).innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+        }
+
+        // Function to apply filter
+        function applyFilter() {
+            const searchQuery = document.getElementById('search').value.toLowerCase();
+            const selectedCategory = document.getElementById('filter-category').value;
+            const sections = document.querySelectorAll('.data-section');
+
+            sections.forEach(section => {
+                const contentElement = section.querySelector('div');
+                const data = JSON.parse(contentElement.dataset.content);
+
+                let filteredData = data;
+                if (searchQuery) {
+                    filteredData = filterData(data, searchQuery);
+                }
+
+                if (selectedCategory && !section.id.includes(selectedCategory)) {
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = 'block';
+                    displayData(contentElement.id, filteredData);
+                }
+            });
+        }
+
+        // Function to filter data based on search query
+        function filterData(data, query) {
+            if (Array.isArray(data)) {
+                return data.filter(item => JSON.stringify(item).toLowerCase().includes(query));
+            } else if (typeof data === 'object') {
+                const filteredData = {};
+                for (const key in data) {
+                    if (JSON.stringify(data[key]).toLowerCase().includes(query)) {
+                        filteredData[key] = data[key];
+                    }
+                }
+                return filteredData;
+            }
+            return data;
+        }
+
+        // Fetch and display each JSON file
+        fetchAndDisplayJSON('36-questions_amour.json', 'questions-amour-content');
+        fetchAndDisplayJSON('48-lois_pouvoir.json', 'lois-pouvoir-content');
+        fetchAndDisplayJSON('50-décisions.json', 'decisions-content');
+        fetchAndDisplayJSON('path/to/180-biais_cognitifs.json', 'biais-cognitifs-content');
+        fetchAndDisplayJSON('roue-étapes_créatrices_imagination.json', 'etapes-imagination-content');
+    </script>
+</body>
+</html>

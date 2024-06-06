@@ -1,0 +1,196 @@
+{
+  "Lois": [
+    {
+      "Numéro": 1,
+      "Loi": "Ne surpassez jamais le maître."
+    },
+    {
+      "Numéro": 2,
+      "Loi": "Ne faites jamais trop confiance à vos amis, utilisez vos ennemis."
+    },
+    {
+      "Numéro": 3,
+      "Loi": "Dissimulez vos intentions."
+    },
+    {
+      "Numéro": 4,
+      "Loi": "Dites-en toujours moins que nécessaire."
+    },
+    {
+      "Numéro": 5,
+      "Loi": "Dépendez autant que possible de vos propres moyens."
+    },
+    {
+      "Numéro": 6,
+      "Loi": "Attirez l'attention à tout prix."
+    },
+    {
+      "Numéro": 7,
+      "Loi": "Faites que les autres travaillent pour vous, mais prenez-en le crédit."
+    },
+    {
+      "Numéro": 8,
+      "Loi": "Faites en sorte que les gens viennent à vous, utilisez un appât si nécessaire."
+    },
+    {
+      "Numéro": 9,
+      "Loi": "Gagnez par vos actions, jamais par vos arguments."
+    },
+    {
+      "Numéro": 10,
+      "Loi": "Contaminez les autres avec votre humeur."
+    },
+    {
+      "Numéro": 11,
+      "Loi": "Apprenez à garder les autres dépendants de vous."
+    },
+    {
+      "Numéro": 12,
+      "Loi": "Utilisez la franchise et la générosité de façon sélective."
+    },
+    {
+      "Numéro": 13,
+      "Loi": "Lorsque vous demandez de l'aide, faites appel à l'intérêt des gens, jamais à leur compassion ou à leur gratitude."
+    },
+    {
+      "Numéro": 14,
+      "Loi": "Soyez un courtisan en toutes circonstances."
+    },
+    {
+      "Numéro": 15,
+      "Loi": "Écrasez complètement votre ennemi."
+    },
+    {
+      "Numéro": 16,
+      "Loi": "Utilisez l'absence pour augmenter le respect et l'honneur."
+    },
+    {
+      "Numéro": 17,
+      "Loi": "Gardez les autres en état d'incertitude perpétuelle."
+    },
+    {
+      "Numéro": 18,
+      "Loi": "N'entrez pas en compétition avec les autres."
+    },
+    {
+      "Numéro": 19,
+      "Loi": "Ne vous attachez à personne."
+    },
+    {
+      "Numéro": 20,
+      "Loi": "Ne commettez pas de fautes majeures."
+    },
+    {
+      "Numéro": 21,
+      "Loi": "Soyez imprévisible."
+    },
+    {
+      "Numéro": 22,
+      "Loi": "Usez de la tactique de la reddition."
+    },
+    {
+      "Numéro": 23,
+      "Loi": "Concentrez vos forces."
+    },
+    {
+      "Numéro": 24,
+      "Loi": "Soyez un parfait courtisan."
+    },
+    {
+      "Numéro": 25,
+      "Loi": "Récréez-vous."
+    },
+    {
+      "Numéro": 26,
+      "Loi": "Gardez vos mains propres."
+    },
+    {
+      "Numéro": 27,
+      "Loi": "Jouez sur le besoin des gens de croire en quelque chose pour créer des disciples."
+    },
+    {
+      "Numéro": 28,
+      "Loi": "Soyez audacieux."
+    },
+    {
+      "Numéro": 29,
+      "Loi": "Préparez tout jusqu'à la fin."
+    },
+    {
+      "Numéro": 30,
+      "Loi": "Rendez vos réussites spectaculaires."
+    },
+    {
+      "Numéro": 31,
+      "Loi": "Contrôlez les options : faites en sorte que les autres jouent avec les cartes que vous distribuez."
+    },
+    {
+      "Numéro": 32,
+      "Loi": "Jouez sur les fantaisies des gens."
+    },
+    {
+      "Numéro": 33,
+      "Loi": "Découvrez le talon d'Achille des autres."
+    },
+    {
+      "Numéro": 34,
+      "Loi": "Soyez royal en votre manière : agissez comme un roi pour être traité comme tel."
+    },
+    {
+      "Numéro": 35,
+      "Loi": "Maîtrisez l'art du timing."
+    },
+    {
+      "Numéro": 36,
+      "Loi": "Méprisez les choses que vous ne pouvez pas avoir : l'ignorance est la meilleure des vengeances."
+    },
+    {
+      "Numéro": 37,
+      "Loi": "Créez des spectacles captivants."
+    },
+    {
+      "Numéro": 38,
+      "Loi": "Pensez comme vous le souhaitez, mais comportez-vous comme les autres."
+    },
+    {
+      "Numéro": 39,
+      "Loi": "Remuez les eaux pour faire apparaître le poisson."
+    },
+    {
+      "Numéro": 40,
+      "Loi": "Méprisez les repas gratuits."
+    },
+    {
+      "Numéro": 41,
+      "Loi": "Évitez de suivre les traces d'un grand homme."
+    },
+    {
+      "Numéro": 42,
+      "Loi": "Frappez le berger et les brebis se disperseront."
+    },
+    {
+      "Numéro": 43,
+      "Loi": "Travaillez sur le cœur et l'esprit des autres."
+    },
+    {
+      "Numéro": 44,
+      "Loi": "Désarmez et exaspérez avec l'effet miroir."
+    },
+    {
+      "Numéro": 45,
+      "Loi": "Prêchez la nécessité du changement, mais ne réformez jamais trop à la fois."
+    },
+    {
+      "Numéro": 46,
+      "Loi": "Ne paraissez jamais trop parfait."
+    },
+    {
+      "Numéro": 47,
+      "Loi": "Ne dépassez jamais l'objectif que vous vous êtes fixé : en la victoire, apprenez à vous arrêter."
+    },
+    {
+      "Numéro": 48,
+      "Loi": "Soyez changeant dans votre forme."
+    }
+  ]
+}

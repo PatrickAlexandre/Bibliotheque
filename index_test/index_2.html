@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application MBTI, Chromosomes et Métabolisme de Base</title>
+
+    <!--W3.CSS+Font Awesome+Chart.js-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        nav {
+            background: linear-gradient(90deg, #3b5998, #2196f3);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+        }
+
+        nav .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        nav .w3-button {
+            background: transparent;
+            border: 2px solid #fff;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav .w3-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav .w3-button:hover::before {
+            transform: translateX(0);
+        }
+
+        nav .w3-button:hover {
+            background: #fff;
+            color: #3b5998;
+        }
+
+        nav .progress-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #ddd;
+            border-radius: 25px;
+            overflow: hidden;
+            margin-top: 10px;
+            flex-grow: 1;
+        }
+
+        nav .progress-bar {
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: white;
+            background-color: #4caf50;
+            width: 0%;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .w3-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
+        }
+
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #mb-result {
+            font-size: 18px;
+            color: #555;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .w3-button {
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .w3-button.w3-blue {
+            background-color: #3b5998;
+        }
+
+        .w3-button.w3-red {
+            background-color: #db4437;
+        }
+
+        .w3-button:hover {
+            opacity: 0.9;
+        }
+
+        .w3-light-grey {
+            background-color: #f1f1f1;
+        }
+
+        .w3-container.w3-blue {
+            background-color: #2196f3;
+        }
+
+        .w3-container.w3-green {
+            background-color: #4caf50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+
+        /* Media queries for responsive design */
+        @media (max-width: 1024px) {
+            .section {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            input, select {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .w3-container {
+                padding: 0 15px;
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+                gap: 8px;
+            }
+
+            .section {
+                margin: 10px 5px;
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            input, select {
+                padding: 6px;
+            }
+
+            .progress-bar {
+                height: 25px;
+                line-height: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+                gap: 5px;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            .section {
+                margin: 5px;
+                padding: 8px;
+            }
+
+            input, select {
+                padding: 5px;
+            }
+
+            .progress-bar {
+                height: 20px;
+                line-height: 20px;
+            }
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-buttons">
+            <button class="w3-button w3-blue w3-margin-right" onclick="loginWith('Facebook')">
+                <i class="fab fa-facebook-f"></i> Login avec Facebook
+            </button>
+            <button class="w3-button w3-red w3-margin-right" onclick="loginWith('Google')">
+                <i class="fab fa-google"></i> Login avec Google
+            </button>
+        </div>
+        <button id="openModalBtn" class="w3-button w3-blue"><i class="fas fa-calculator"></i> Ouvrir le Formulaire MB</button>
+        <div class="progress-container">
+            <div class="progress-bar" id="mainProgressBar">0%</div>
+        </div>
+    </nav>
+
+    <div class="w3-container section" id="mbti-section">
+        <h2>Sélecteur de Types MBTI (Total = 16)</h2>
+        <label for="mbti-select">Choisissez un type MBTI:</label>
+        <select id="mbti-select">
+            <option value="ISTJ">ISTJ 📚</option>
+            <option value="ISFJ">ISFJ 🌼</option>
+            <option value="INFJ">INFJ 🌟</option>
+            <option value="INTJ">INTJ 🧠</option>
+            <option value="ISTP">ISTP 🛠️</option>
+            <option value="ISFP">ISFP 🎨</option>
+            <option value="INFP">INFP 💭</option>
+            <option value="INTP">INTP 🔍</option>
+            <option value="ESTP">ESTP ⚡</option>
+            <option value="ESFP">ESFP 🎉</option>
+            <option value="ENFP">ENFP 🌈</option>
+            <option value="ENTP">ENTP 💡</option>
+            <option value="ESTJ">ESTJ 📊</option>
+            <option value="ESFJ">ESFJ 💖</option>
+            <option value="ENFJ">ENFJ 🌍</option>
+            <option value="ENTJ">ENTJ 🎯</option>
+        </select>
+        <div id="mbti-info" style="margin-top: 20px;">
+            <!-- MBTI information will be displayed here -->
+        </div>
+    </div>
+
+    <div id="metabolismModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="w3-container section">
+                <h2>Calcul du Métabolisme de Base (MB)</h2>
+                <form id="mb-form" class="w3-container">
+                    <label for="dob">Date de Naissance:</label>
+                    <input type="date" id="dob" name="dob" class="w3-input w3-border" required><br><br>
+
+                    <label for="weight">Poids (kg):</label>
+                    <input type="number" id="weight" name="weight" class="w3-input w3-border" value="70" required><br><br>
+
+                    <label for="height">Taille (cm):</label>
+                    <input type="number" id="height" name="height" class="w3-input w3-border" value="170" required><br><br>
+
+                    <label for="activity-level">Votre profil:</label>
+                    <select id="activity-level" name="activity-level" class="w3-select w3-border" required>
+                        <option value="1.2">Sédentaire (Aucun exercice quotidien ou presque) MB x 1,2</option>
+                        <option value="1.375">Légèrement actif (Exercice physique 1 à 3 fois par semaine) MB x 1,375</option>
+                        <option value="1.55">Actif (Exercice physique 3 à 5 fois par semaine) MB x 1,55</option>
+                        <option value="1.725">Très actif (Exercice quotidien ou soutenu) MB x 1,725</option>
+                        <option value="1.9">Extrêmement actif (Travail physique ou grand sportif) MB x 1,9</option>
+                    </select><br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container section" id="data-visualization-section">
+        <h2>Visualisation de Données</h2>
+        <div class="grid-container" id="chromosomes-grid"></div>
+        <canvas id="myChart"></canvas>
+        <p id="mb-result"></p>
+    </div>
+
+    <div class="w3-container section" id="coicop-section">
+        <h2>Dépenses COICOP (TOTAL = 12)</h2>
+        <table id="coicop-table">
+            <thead>
+                <tr>
+                    <th>Catégorie COICOP</th>
+                    <th>Dépenses (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="fas fa-utensils icon"></i> 1. Alimentation et boissons non alcoolisées</td>
+                    <td>10%</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-wine-bottle icon"></i> 2. Boissons alcoolisées, tabac et narcotiques</td>
+                    <td>5%</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-tshirt icon"></i> 3. Articles d'habillement et chaussures</td>
+                    <td>8%</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-home icon"></i> 4. Logement, eau, électricité, gaz et autres combustibles</td>
+                    <td>25%</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-couch icon"></i> 5. Ameublement, équipement ménager et entretien courant de la maison</td>
+                    <td>6%</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-heartbeat icon"></i> 6. Santé</td>
+                    <td>7%</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-car icon"></i> 7. Transports</td>
+                    <td>12%</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-phone icon"></i> 8. Communications</td>
+                    <td>3%</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-theater-masks icon"></i> 9. Loisirs et culture</td>
+                    <td>10%</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-graduation-cap icon"></i> 10. Éducation</td>
+                    <td>5%</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-concierge-bell icon"></i> 11. Restaurants et hôtels</td>
+                    <td>5%</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-gifts icon"></i> 12. Biens et services divers</td>
+                    <td>4%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="w3-container section w3-hide" id="life-expectancy-section">
+        <h2>Espérance de Vie Restante</h2>
+        <div class="w3-margin-bottom">
+            <label>Femmes:</label>
+            <div class="w3-light-grey">
+                <div id="lifeExpectancyFemale" class="w3-container w3-blue" style="width:0%">0 ans</div>
+            </div>
+        </div>
+        <div>
+            <label>Hommes:</label>
+            <div class="w3-light-grey">
+                <div id="lifeExpectancyMale" class="w3-container w3-green" style="width:0%">0 ans</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const emojis = [
+                "🍏", "🍎", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🍈", 
+                "🍒", "🍑", "🍍", "🥭", "🍅", "🍆", "🥑", "🥦", "🥕", "🌽", 
+                "🌶️", "🥒", "🥬"
+            ];
+            const chromosomes = Array.from({ length: 22 }, (_, i) => ({ name: `Chromosome ${i + 1}`, emoji: emojis[i] }));
+            const chromosomesGrid = document.getElementById('chromosomes-grid');
+            chromosomes.forEach(chromosome => {
+                const gridItem = document.createElement('div');
+                gridItem.classList.add('grid-item');
+                gridItem.innerHTML = `<img src="https://via.placeholder.com/50" alt="${chromosome.name}" title="${chromosome.name} ${chromosome.emoji}">`;
+                chromosomesGrid.appendChild(gridItem);
+            });
+
+            // Add the 23rd chromosome selector
+            const chromosome23Item = document.createElement('div');
+            chromosome23Item.classList.add('grid-item');
+            chromosome23Item.innerHTML = `
+                <select id="chromosome" name="chromosome" class="w3-select w3-border">
+                    <option value="XX">XX (Femme) 🚺</option>
+                    <option value="XY">XY (Homme) 🚹</option>
+                </select>
+            `;
+            chromosomesGrid.appendChild(chromosome23Item);
+
+            const mbForm = document.getElementById('mb-form');
+            const dob = document.getElementById('dob');
+            const weight = document.getElementById('weight');
+            const height = document.getElementById('height');
+            const chromosome = document.getElementById('chromosome');
+            const activityLevel = document.getElementById('activity-level');
+
+            // Set default value for date of birth
+            const today = new Date().toISOString().split('T')[0];
+            dob.value = today;
+
+            [dob, weight, height, chromosome, activityLevel].forEach(element => {
+                element.addEventListener('input', calculateMetabolism);
+            });
+
+            function calculateMetabolism() {
+                const chromosomeValue = chromosome.value;
+                const dobValue = dob.value;
+                const weightValue = parseFloat(weight.value);
+                const heightValue = parseFloat(height.value);
+                const activityMultiplier = parseFloat(activityLevel.value);
+                if (dobValue && weightValue && heightValue && chromosomeValue) {
+                    const age = calculateAge(dobValue);
+                    let mb;
+
+                    if (chromosomeValue === 'XX') {
+                        mb = 2.741 + 0.0402 * weightValue + 0.711 * heightValue - 0.0197 * age;
+                    } else if (chromosomeValue === 'XY') {
+                        mb = 0.276 + 0.0573 * weightValue + 2.073 * heightValue - 0.0285 * age;
+                    }
+
+                    const dailyExpenditure = mb * activityMultiplier;
+
+                    document.getElementById('mb-result').textContent = `Votre Métabolisme de Base est de ${mb.toFixed(2)} kcal/jour. Votre dépense quotidienne est de ${dailyExpenditure.toFixed(2)} kcal/jour.`;
+
+                    updateLifeExpectancy(age, chromosomeValue);
+                }
+            }
+
+            function calculateAge(dob) {
+                const diffMs = Date.now() - new Date(dob).getTime();
+                const ageDate = new Date(diffMs);
+                return Math.abs(ageDate.getUTCFullYear() - 1970);
+            }
+
+            function loginWith(provider) {
+                alert(`Login avec ${provider} simulé.`);
+            }
+
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        'Investing in Stocks (08:00)', 'Networking (09:00)', 'Personal Development (10:00)', 
+                        'Fitness Routine (11:00)', 'Reading (12:00)', 'Managing Businesses (13:00)', 
+                        'Traveling (14:00)', 'Learning New Skills (15:00)', 'Real Estate Investments (16:00)', 
+                        'Meditation (17:00)', 'Philanthropy (18:00)', 'High-End Dining (19:00)', 
+                        'Luxury Shopping (20:00)', 'Golfing (21:00)', 'Collecting Art (22:00)', 
+                        'Attending Conferences (23:00)', 'Advising Startups (00:00)', 'Yachting (01:00)', 
+                        'Skiing (02:00)', 'Spa Days (03:00)', 'Driving Luxury Cars (04:00)', 
+                        'Charity Events (05:00)', 'Exclusive Parties (06:00)'
+                    ],
+                    datasets: [{
+                        label: 'Habitudes',
+                        data: [12, 19, 15, 10, 8, 20, 14, 16, 9, 6, 18, 21, 11, 7, 13, 5, 4, 3, 2, 1, 0, 1, 2],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            function updateLifeExpectancy(age, chromosome) {
+                const maxLifeExpectancyFemale = 82;
+                const maxLifeExpectancyMale = 78;
+                let remainingLifeExpectancy;
+
+                if (chromosome === 'XX') {
+                    remainingLifeExpectancy = maxLifeExpectancyFemale - age;
+                } else if (chromosome === 'XY') {
+                    remainingLifeExpectancy = maxLifeExpectancyMale - age;
+                }
+
+                remainingLifeExpectancy = remainingLifeExpectancy < 0 ? 0 : remainingLifeExpectancy;
+
+                const percentage = (remainingLifeExpectancy / (chromosome === 'XX' ? maxLifeExpectancyFemale : maxLifeExpectancyMale)) * 100;
+                const progressBar = chromosome === 'XX' ? document.getElementById('lifeExpectancyFemale') : document.getElementById('lifeExpectancyMale');
+
+                progressBar.style.width = percentage + '%';
+                progressBar.textContent = remainingLifeExpectancy + ' ans';
+
+                // Mettre à jour la barre de progression principale
+                document.getElementById('mainProgressBar').style.width = percentage + '%';
+                document.getElementById('mainProgressBar').textContent = percentage.toFixed(2) + '%';
+            }
+
+            // Change theme color based on MBTI type
+            const mbtiSelect = document.getElementById('mbti-select');
+            mbtiSelect.addEventListener('change', function() {
+                const mbtiColors = {
+                    "ISTJ": "#ff9999", // Light Red
+                    "ISFJ": "#ffcc99", // Light Orange
+                    "INFJ": "#ffff99", // Light Yellow
+                    "INTJ": "#99ff99", // Light Green
+                    "ISTP": "#99ffcc", // Light Cyan
+                    "ISFP": "#99ccff", // Light Blue
+                    "INFP": "#cc99ff", // Light Purple
+                    "INTP": "#ff99cc", // Light Pink
+                    "ESTP": "#ff6666", // Red
+                    "ESFP": "#ffb366", // Orange
+                    "ENFP": "#ffff66", // Yellow
+                    "ENTP": "#66ff66", // Green
+                    "ESTJ": "#66ffb3", // Cyan
+                    "ESFJ": "#66b3ff", // Blue
+                    "ENFJ": "#b366ff", // Purple
+                    "ENTJ": "#ff66b3"  // Pink
+                };
+                const mbtiInfo = {
+                    "ISTJ": {
+                        "functionAux": "Extraverted Thinking",
+                        "functionPrimary": "Introverted Sensing",
+                        "demographic": "11.6%",
+                        "subtype": "Logistician",
+                        "nickname": "Inspector"
+                    },
+                    "ISFJ": {
+                        "functionAux": "Extraverted Feeling",
+                        "functionPrimary": "Introverted Sensing",
+                        "demographic": "13.8%",
+                        "subtype": "Defender",
+                        "nickname": "Protector"
+                    },
+                    "INFJ": {
+                        "functionAux": "Extraverted Feeling",
+                        "functionPrimary": "Introverted Intuition",
+                        "demographic": "1.5%",
+                        "subtype": "Advocate",
+                        "nickname": "Mystic"
+                    },
+                    "INTJ": {
+                        "functionAux": "Extraverted Thinking",
+                        "functionPrimary": "Introverted Intuition",
+                        "demographic": "2.1%",
+                        "subtype": "Architect",
+                        "nickname": "Mastermind"
+                    },
+                    "ISTP": {
+                        "functionAux": "Extraverted Sensing",
+                        "functionPrimary": "Introverted Thinking",
+                        "demographic": "5.4%",
+                        "subtype": "Virtuoso",
+                        "nickname": "Craftsman"
+                    },
+                    "ISFP": {
+                        "functionAux": "Extraverted Sensing",
+                        "functionPrimary": "Introverted Feeling",
+                        "demographic": "8.8%",
+                        "subtype": "Adventurer",
+                        "nickname": "Artist"
+                    },
+                    "INFP": {
+                        "functionAux": "Extraverted Intuition",
+                        "functionPrimary": "Introverted Feeling",
+                        "demographic": "4.4%",
+                        "subtype": "Mediator",
+                        "nickname": "Dreamer"
+                    },
+                    "INTP": {
+                        "functionAux": "Extraverted Intuition",
+                        "functionPrimary": "Introverted Thinking",
+                        "demographic": "3.3%",
+                        "subtype": "Logician",
+                        "nickname": "Thinker"
+                    },
+                    "ESTP": {
+                        "functionAux": "Introverted Thinking",
+                        "functionPrimary": "Extraverted Sensing",
+                        "demographic": "4.3%",
+                        "subtype": "Entrepreneur",
+                        "nickname": "Dynamo"
+                    },
+                    "ESFP": {
+                        "functionAux": "Introverted Feeling",
+                        "functionPrimary": "Extraverted Sensing",
+                        "demographic": "8.5%",
+                        "subtype": "Entertainer",
+                        "nickname": "Performer"
+                    },
+                    "ENFP": {
+                        "functionAux": "Introverted Feeling",
+                        "functionPrimary": "Extraverted Intuition",
+                        "demographic": "8.1%",
+                        "subtype": "Campaigner",
+                        "nickname": "Champion"
+                    },
+                    "ENTP": {
+                        "functionAux": "Introverted Thinking",
+                        "functionPrimary": "Extraverted Intuition",
+                        "demographic": "3.2%",
+                        "subtype": "Debater",
+                        "nickname": "Visionary"
+                    },
+                    "ESTJ": {
+                        "functionAux": "Introverted Sensing",
+                        "functionPrimary": "Extraverted Thinking",
+                        "demographic": "8.7%",
+                        "subtype": "Executive",
+                        "nickname": "Supervisor"
+                    },
+                    "ESFJ": {
+                        "functionAux": "Introverted Sensing",
+                        "functionPrimary": "Extraverted Feeling",
+                        "demographic": "12.3%",
+                        "subtype": "Consul",
+                        "nickname": "Provider"
+                    },
+                    "ENFJ": {
+                        "functionAux": "Introverted Intuition",
+                        "functionPrimary": "Extraverted Feeling",
+                        "demographic": "2.5%",
+                        "subtype": "Protagonist",
+                        "nickname": "Teacher"
+                    },
+                    "ENTJ": {
+                        "functionAux": "Introverted Intuition",
+                        "functionPrimary": "Extraverted Thinking",
+                        "demographic": "1.8%",
+                        "subtype": "Commander",
+                        "nickname": "Fieldmarshal"
+                    }
+                };
+
+                const selectedType = mbtiSelect.value;
+                document.body.style.backgroundColor = mbtiColors[selectedType];
+
+                const info = mbtiInfo[selectedType];
+                const infoHtml = `
+                    <p><strong>Fonction auxiliaire :</strong> ${info.functionAux}</p>
+                    <p><strong>Fonction principale :</strong> ${info.functionPrimary}</p>
+                    <p><strong>Fréquence démographique :</strong> ${info.demographic}</p>
+                    <p><strong>Sous-tempérament :</strong> ${info.subtype}</p>
+                    <p><strong>Surnom :</strong> ${info.nickname}</p>
+                `;
+                document.getElementById('mbti-info').innerHTML = infoHtml;
+            });
+
+            // Trigger the change event to set the initial theme
+            mbtiSelect.dispatchEvent(new Event('change'));
+
+            // Modal functionality
+            const modal = document.getElementById("metabolismModal");
+            const btn = document.getElementById("openModalBtn");
+            const span = document.getElementsByClassName("close")[0];
+
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,746 @@
+[
+    {
+        "bias": "Biais d'ancrage",
+        "description": "La tendance à s'appuyer trop fortement sur la première information reçue (l'ancre) pour prendre des décisions."
+    },
+    {
+        "bias": "Effet de récence",
+        "description": "La tendance à accorder plus d'importance aux informations les plus récentes dans la prise de décision."
+    },
+    {
+        "bias": "Biais de confirmation",
+        "description": "La tendance à privilégier les informations qui confirment ses propres croyances ou hypothèses."
+    },
+    {
+        "bias": "Biais de négativité",
+        "description": "La tendance à accorder plus de poids aux expériences négatives qu'aux positives."
+    },
+    {
+        "bias": "Effet Dunning-Kruger",
+        "description": "Le phénomène selon lequel les personnes les moins compétentes tendent à surestimer leurs compétences."
+    },
+    {
+        "bias": "Biais d'autocomplaisance",
+        "description": "La tendance à attribuer ses succès à des facteurs internes et ses échecs à des facteurs externes."
+    },
+    {
+        "bias": "Effet de halo",
+        "description": "La tendance à juger une personne de manière globale en se basant sur une seule de ses caractéristiques."
+    },
+    {
+        "bias": "Biais de statu quo",
+        "description": "La préférence pour que les choses restent les mêmes plutôt que de changer."
+    },
+    {
+        "bias": "Biais de disponibilité",
+        "description": "La tendance à se baser sur les informations les plus facilement disponibles pour prendre des décisions."
+    },
+    {
+        "bias": "Biais de représentativité",
+        "description": "La tendance à juger la probabilité d'un événement par sa similarité avec une catégorie connue."
+    },
+    {
+        "bias": "Effet de simple exposition",
+        "description": "La tendance à développer une préférence pour les choses simplement parce qu'on y est exposé de manière répétée."
+    },
+    {
+        "bias": "Biais de l'optimisme",
+        "description": "La tendance à croire que l'on est moins susceptible de vivre des événements négatifs par rapport aux autres."
+    },
+    {
+        "bias": "Effet de faux consensus",
+        "description": "La tendance à surestimer la mesure dans laquelle les autres partagent nos opinions et comportements."
+    },
+    {
+        "bias": "Biais d'autorité",
+        "description": "La tendance à accorder plus de poids aux opinions des figures d'autorité."
+    },
+    {
+        "bias": "Effet de contraste",
+        "description": "La tendance à percevoir les choses différemment selon le contexte dans lequel elles sont présentées."
+    },
+    {
+        "bias": "Biais de cadrage",
+        "description": "La tendance à être influencé par la façon dont une information est présentée plutôt que par l'information elle-même."
+    },
+    {
+        "bias": "Effet de primauté",
+        "description": "La tendance à mieux se souvenir des premières informations reçues."
+    },
+    {
+        "bias": "Biais de croyance",
+        "description": "La tendance à juger la force d'un argument en fonction de la croyance en sa conclusion."
+    },
+    {
+        "bias": "Biais d'attention",
+        "description": "La tendance à prêter attention à certaines informations tout en ignorant d'autres."
+    },
+    {
+        "bias": "Effet de surconfiance",
+        "description": "La tendance à surestimer ses propres capacités ou connaissances."
+    },
+    {
+        "bias": "Biais de conformité",
+        "description": "La tendance à se conformer aux opinions ou comportements des autres."
+    },
+    {
+        "bias": "Effet Barnum",
+        "description": "La tendance à accepter des descriptions vagues et générales comme s'appliquant spécifiquement à soi-même."
+    },
+    {
+        "bias": "Biais de projection",
+        "description": "La tendance à penser que les autres pensent, ressentent et croient de la même manière que soi."
+    },
+    {
+        "bias": "Effet de dotation",
+        "description": "La tendance à attribuer plus de valeur à un objet simplement parce qu'on le possède."
+    },
+    {
+        "bias": "Biais de résultat",
+        "description": "La tendance à évaluer une décision en fonction de son résultat plutôt que de la qualité du processus décisionnel."
+    },
+    {
+        "bias": "Effet de miroir",
+        "description": "La tendance à voir ses propres qualités et défauts chez les autres."
+    },
+    {
+        "bias": "Biais d'autoconfirmation",
+        "description": "La tendance à interpréter les nouvelles informations comme confirmant ses croyances préexistantes."
+    },
+    {
+        "bias": "Effet IKEA",
+        "description": "La tendance à attribuer plus de valeur à des produits qu'on a partiellement créés soi-même."
+    },
+    {
+        "bias": "Biais de rétrospection",
+        "description": "La tendance à voir les événements passés comme étant plus prévisibles qu'ils ne l'étaient."
+    },
+    {
+        "bias": "Effet Pygmalion",
+        "description": "La tendance des attentes élevées à améliorer les performances."
+    },
+    {
+        "bias": "Biais de regroupement",
+        "description": "La tendance à voir des motifs ou des régularités dans des données aléatoires."
+    },
+    {
+        "bias": "Effet Forer",
+        "description": "La tendance à croire que des descriptions vagues et générales s'appliquent précisément à soi-même."
+    },
+    {
+        "bias": "Biais d'égocentrisme",
+        "description": "La tendance à exagérer l'importance de ses propres actions et expériences dans les événements."
+    },
+    {
+        "bias": "Biais de la main chaude",
+        "description": "La croyance que des succès récents augmentent la probabilité de succès futurs dans des événements indépendants."
+    },
+    {
+        "bias": "Biais de survivant",
+        "description": "La tendance à se concentrer sur les exemples de succès plutôt que sur les échecs."
+    },
+    {
+        "bias": "Effet de dissonance cognitive",
+        "description": "La tension interne résultant de la contradiction entre des croyances ou comportements."
+    },
+    {
+        "bias": "Biais de complaisance",
+        "description": "La tendance à se souvenir de ses succès et à oublier ses échecs."
+    },
+    {
+        "bias": "Effet de surjustification",
+        "description": "La tendance à perdre l'intérêt pour une activité en raison d'une récompense excessive."
+    },
+    {
+        "bias": "Biais de proportionnalité",
+        "description": "La croyance que des événements importants doivent avoir des causes importantes."
+    },
+    {
+        "bias": "Effet Zeigarnik",
+        "description": "La tendance à mieux se souvenir des tâches inachevées que des tâches terminées."
+    },
+    {
+        "bias": "Biais d'attribution",
+        "description": "La tendance à attribuer les actions des autres à leur personnalité plutôt qu'à des circonstances extérieures."
+    },
+    {
+        "bias": "Effet placebo",
+        "description": "La croyance en l'efficacité d'un traitement inactif qui peut produire de réels effets."
+    },
+    {
+        "bias": "Biais d'échantillonnage",
+        "description": "La tendance à généraliser à partir d'un échantillon non représentatif."
+    },
+    {
+        "bias": "Effet de rareté",
+        "description": "La tendance à accorder plus de valeur à un objet rare."
+    },
+    {
+        "bias": "Biais de l'illusion de fréquence",
+        "description": "La tendance à voir plus fréquemment des objets ou événements après y avoir été exposé."
+    },
+    {
+        "bias": "Effet de pseudo-certitude",
+        "description": "La tendance à percevoir un choix risqué comme moins risqué lorsqu'il est présenté d'une certaine manière."
+    },
+    {
+        "bias": "Biais de réactance",
+        "description": "La réaction négative à une limitation de ses libertés."
+    },
+    {
+        "bias": "Effet de réactance",
+        "description": "La tendance à adopter un comportement opposé lorsqu'on se sent contraint."
+    },
+    {
+        "bias": "Biais de distinction",
+        "description": "La tendance à percevoir des différences exagérées entre des choses similaires lorsqu'elles sont présentées ensemble."
+    },
+    {
+        "bias": "Effet de rime",
+        "description": "La tendance à juger des phrases rimées comme plus vraies."
+    },
+    {
+        "bias": "Biais de visibilité",
+        "description": "La tendance à se concentrer sur les éléments les plus visibles et à ignorer ceux qui sont cachés."
+    },
+    {
+        "bias": "Biais de compensation",
+        "description": "La tendance à compenser un comportement perçu comme négatif par un comportement positif."
+    },
+    {
+        "bias": "Effet de mode",
+        "description": "La tendance à adopter des opinions ou comportements populaires."
+    },
+    {
+        "bias": "Biais de projection d'attitude",
+        "description": "La tendance à croire que les autres partagent ses attitudes."
+    },
+    {
+        "bias": "Biais de coïncidence",
+        "description": "La tendance à voir des coïncidences significatives dans des événements aléatoires."
+    },
+    {
+        "bias": "Effet de l'illusion de contrôle",
+        "description": "La tendance à surestimer sa capacité à contrôler des événements."
+    },
+    {
+        "bias": "Biais d'interaction",
+        "description": "La tendance à attribuer les résultats d'une interaction sociale à l'autre personne plutôt qu'à soi-même."
+    },
+    {
+        "bias": "Effet de séquence",
+        "description": "La tendance à juger différemment une série d'événements selon leur ordre de présentation."
+    },
+    {
+        "bias": "Biais d'estimation",
+        "description": "La tendance à faire des estimations incorrectes en raison de préjugés ou de limites cognitives."
+    },
+    {
+        "bias": "Effet de la perception sélective",
+        "description": "La tendance à ne voir et à se souvenir que des informations qui confirment ses croyances."
+    },
+    {
+        "bias": "Biais de positivité",
+        "description": "La tendance à se concentrer sur les aspects positifs d'une situation."
+    },
+    {
+        "bias": "Effet d'encodage",
+        "description": "La tendance à mieux se souvenir des informations associées à des émotions fortes."
+    },
+    {
+        "bias": "Biais de négation de l'évidence",
+        "description": "La tendance à nier ou ignorer des preuves contraires à ses croyances."
+    },
+    {
+        "bias": "Effet de contraste relatif",
+        "description": "La tendance à percevoir les choses différemment en comparaison avec d'autres objets ou événements récents."
+    },
+    {
+        "bias": "Biais d'ultracrépidarianisme",
+        "description": "La tendance à donner des avis sur des sujets hors de sa compétence."
+    },
+    {
+        "bias": "Effet de clarté",
+        "description": "La tendance à croire que ses pensées sont plus claires et compréhensibles pour les autres qu'elles ne le sont réellement."
+    },
+    {
+        "bias": "Biais d'accentuation",
+        "description": "La tendance à exagérer les différences entre des groupes et à minimiser les différences à l'intérieur des groupes."
+    },
+    {
+        "bias": "Effet d'omniscience rétrospective",
+        "description": "La tendance à croire, après coup, que l'on aurait pu prédire un événement."
+    },
+    {
+        "bias": "Biais de la malédiction du savoir",
+        "description": "La difficulté de se mettre à la place de quelqu'un qui ne possède pas les mêmes connaissances."
+    },
+    {
+        "bias": "Effet de gel",
+        "description": "La tendance à adhérer à une décision prise même si elle s'avère mauvaise."
+    },
+    {
+        "bias": "Biais d'illusion de transparence",
+        "description": "La tendance à surestimer la mesure dans laquelle ses émotions sont apparentes pour les autres."
+    },
+    {
+        "bias": "Effet de croyance en un monde juste",
+        "description": "La croyance que le monde est fondamentalement juste et que les gens obtiennent ce qu'ils méritent."
+    },
+    {
+        "bias": "Biais de complétude",
+        "description": "La tendance à chercher des informations supplémentaires même si elles n'ont aucune utilité."
+    },
+    {
+        "bias": "Effet de Diderot",
+        "description": "La tendance à acquérir un bien nouveau qui entraîne une spirale de consommation."
+    },
+    {
+        "bias": "Biais de distorsion rétrospective",
+        "description": "La tendance à réinterpréter le passé de manière à ce qu'il corresponde mieux aux événements présents."
+    },
+    {
+        "bias": "Effet de halo rétrospectif",
+        "description": "La tendance à juger un événement passé à travers le prisme des événements récents."
+    },
+    {
+        "bias": "Biais de perspective",
+        "description": "La tendance à voir les événements du passé comme moins graves qu'ils ne l'étaient au moment où ils se sont produits."
+    },
+    {
+        "bias": "Effet de simple explication",
+        "description": "La tendance à préférer les explications simples aux explications complexes."
+    },
+    {
+        "bias": "Biais d'inertie",
+        "description": "La tendance à résister au changement et à préférer le statu quo."
+    },
+    {
+        "bias": "Effet de récence immédiate",
+        "description": "La tendance à mieux se souvenir des dernières informations reçues."
+    },
+    {
+        "bias": "Biais d'attribution de blâme",
+        "description": "La tendance à blâmer les autres pour ses propres erreurs ou échecs."
+    },
+    {
+        "bias": "Effet de pointe-fin",
+        "description": "La tendance à juger une expérience principalement en fonction de son point culminant et de sa fin."
+    },
+    {
+        "bias": "Biais de disponibilité heuristique",
+        "description": "La tendance à se baser sur des exemples récents ou faciles à rappeler pour évaluer des situations."
+    },
+    {
+        "bias": "Effet de cadrage mental",
+        "description": "La tendance à être influencé par le cadre dans lequel une information est présentée."
+    },
+    {
+        "bias": "Biais de satisfaction du chercheur",
+        "description": "La tendance des chercheurs à interpréter les données de manière à confirmer leurs hypothèses."
+    },
+    {
+        "bias": "Effet de confusion",
+        "description": "La tendance à confondre la cause et l'effet ou à mal interpréter les relations entre les événements."
+    },
+    {
+        "bias": "Biais de congruence",
+        "description": "La tendance à agir de manière cohérente avec ses croyances et attitudes."
+    },
+    {
+        "bias": "Effet de cohérence",
+        "description": "La tendance à percevoir des choses comme allant ensemble ou étant liées même si elles ne le sont pas."
+    },
+    {
+        "bias": "Biais d'influence des pairs",
+        "description": "La tendance à être influencé par les opinions ou comportements de ses pairs."
+    },
+    {
+        "bias": "Effet de groupe",
+        "description": "La tendance des membres d'un groupe à se conformer aux normes du groupe."
+    },
+    {
+        "bias": "Biais de distorsion sélective",
+        "description": "La tendance à interpréter les informations de manière à les rendre compatibles avec ses croyances."
+    },
+    {
+        "bias": "Effet de croyance préexistante",
+        "description": "La tendance à rejeter les informations qui contredisent ses croyances."
+    },
+    {
+        "bias": "Biais d'illusion de cause",
+        "description": "La tendance à voir des relations causales là où il n'y en a pas."
+    },
+    {
+        "bias": "Effet de congruence cognitive",
+        "description": "La tendance à rechercher la cohérence entre ses croyances, attitudes et comportements."
+    },
+    {
+        "bias": "Biais d'assimilation",
+        "description": "La tendance à intégrer de nouvelles informations dans ses schémas mentaux existants."
+    },
+    {
+        "bias": "Effet de choix par défaut",
+        "description": "La tendance à choisir l'option par défaut ou prédéfinie."
+    },
+    {
+        "bias": "Biais de l'impact imaginé",
+        "description": "La tendance à surestimer l'impact futur d'un événement."
+    },
+    {
+        "bias": "Effet d'autosatisfaction",
+        "description": "La tendance à se satisfaire de soi-même et de ses réalisations."
+    },
+    {
+        "bias": "Biais de renforcement",
+        "description": "La tendance à se rappeler plus facilement des informations qui renforcent ses croyances."
+    },
+    {
+        "bias": "Effet de focalisation",
+        "description": "La tendance à se concentrer sur un aspect d'une situation au détriment des autres."
+    },
+    {
+        "bias": "Biais d'effet de renforcement",
+        "description": "La tendance à percevoir les informations comme confirmant ses croyances."
+    },
+    {
+        "bias": "Effet de familiarité",
+        "description": "La tendance à préférer les choses auxquelles on a été exposé auparavant."
+    },
+    {
+        "bias": "Biais d'illusion de validité",
+        "description": "La tendance à surestimer la précision de ses jugements."
+    },
+    {
+        "bias": "Effet de primauté de l'information",
+        "description": "La tendance à accorder plus de poids aux premières informations reçues."
+    },
+    {
+        "bias": "Biais d'observation sélective",
+        "description": "La tendance à ne voir que ce que l'on s'attend à voir."
+    },
+    {
+        "bias": "Effet d'anticipation",
+        "description": "La tendance à se préparer mentalement à des événements futurs."
+    },
+    {
+        "bias": "Biais de distorsion de confirmation",
+        "description": "La tendance à interpréter les nouvelles informations comme confirmant ses croyances existantes."
+    },
+    {
+        "bias": "Effet de perception inversée",
+        "description": "La tendance à voir des relations inversées entre des variables."
+    },
+    {
+        "bias": "Biais d'hypocrisie",
+        "description": "La tendance à critiquer les autres pour des comportements que l'on adopte soi-même."
+    },
+    {
+        "bias": "Effet de distorsion des choix",
+        "description": "La tendance à déformer les souvenirs de ses choix passés pour les rendre plus cohérents avec ses croyances actuelles."
+    },
+    {
+        "bias": "Biais de l'illusion de vérité",
+        "description": "La tendance à croire qu'une information est vraie parce qu'elle est répétée souvent."
+    },
+    {
+        "bias": "Effet de dépendance au chemin",
+        "description": "La tendance à être influencé par les décisions passées, même lorsque les conditions changent."
+    },
+    {
+        "bias": "Biais d'illusion de compréhension",
+        "description": "La tendance à surestimer sa compréhension d'un sujet complexe."
+    },
+    {
+        "bias": "Effet d'auto-licence",
+        "description": "La tendance à se donner la permission de se comporter de manière indulgente après avoir fait quelque chose de bien."
+    },
+    {
+        "bias": "Biais d'amorçage",
+        "description": "La tendance à être influencé par une première information lors de l'évaluation d'une situation."
+    },
+    {
+        "bias": "Effet de connaissance cumulative",
+        "description": "La tendance à accumuler des connaissances qui renforcent ses croyances."
+    },
+    {
+        "bias": "Biais de la loi de Brandolini",
+        "description": "La difficulté de réfuter des informations fausses par rapport à la facilité de les diffuser."
+    },
+    {
+        "bias": "Effet de simplification excessive",
+        "description": "La tendance à simplifier les problèmes complexes au point de les rendre incomplets ou incorrects."
+    },
+    {
+        "bias": "Biais de la raison motivée",
+        "description": "La tendance à raisonner de manière à arriver à une conclusion désirée."
+    },
+    {
+        "bias": "Effet de régression vers la moyenne",
+        "description": "La tendance à voir des événements extrêmes suivis d'événements plus proches de la moyenne."
+    },
+    {
+        "bias": "Biais de prise de décision irréversible",
+        "description": "La tendance à croire que toutes les décisions sont finales et ne peuvent pas être changées."
+    },
+    {
+        "bias": "Effet de dissonance réductionniste",
+        "description": "La tendance à minimiser la dissonance cognitive en simplifiant ses croyances."
+    },
+    {
+        "bias": "Biais de surestimation des chances",
+        "description": "La tendance à surestimer la probabilité de succès dans des événements risqués."
+    },
+    {
+        "bias": "Effet de rationalisation",
+        "description": "La tendance à justifier des actions ou croyances après coup de manière logique mais fallacieuse."
+    },
+    {
+        "bias": "Biais de distorsion cognitive",
+        "description": "La tendance à interpréter les informations de manière à les rendre compatibles avec ses croyances."
+    },
+    {
+        "bias": "Effet de simplification cognitive",
+        "description": "La tendance à simplifier les processus cognitifs pour rendre les décisions plus faciles."
+    },
+    {
+        "bias": "Biais de rétention sélective",
+        "description": "La tendance à se rappeler des informations qui confirment ses croyances et à oublier celles qui les contredisent."
+    },
+    {
+        "bias": "Effet de la surcharge cognitive",
+        "description": "La tendance à être submergé par une trop grande quantité d'informations, ce qui affecte la prise de décision."
+    },
+    {
+        "bias": "Biais de réduction de la dissonance",
+        "description": "La tendance à ajuster ses croyances pour réduire la dissonance cognitive."
+    },
+    {
+        "bias": "Effet de simplification des tâches",
+        "description": "La tendance à simplifier les tâches complexes pour les rendre plus gérables."
+    },
+    {
+        "bias": "Biais de simplification des schémas",
+        "description": "La tendance à simplifier les schémas mentaux pour rendre la compréhension plus facile."
+    },
+    {
+        "bias": "Effet de simplification des perceptions",
+        "description": "La tendance à simplifier la perception des informations pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des informations",
+        "description": "La tendance à simplifier les informations pour les rendre plus faciles à traiter."
+    },
+    {
+        "bias": "Effet de simplification des concepts",
+        "description": "La tendance à simplifier les concepts complexes pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des croyances",
+        "description": "La tendance à simplifier les croyances pour réduire la complexité cognitive."
+    },
+    {
+        "bias": "Effet de simplification des attitudes",
+        "description": "La tendance à simplifier les attitudes pour les rendre plus cohérentes avec ses croyances."
+    },
+    {
+        "bias": "Biais de simplification des jugements",
+        "description": "La tendance à simplifier les jugements pour les rendre plus cohérents et faciles à comprendre."
+    },
+    {
+        "bias": "Effet de simplification des souvenirs",
+        "description": "La tendance à simplifier les souvenirs pour les rendre plus cohérents avec ses croyances actuelles."
+    },
+    {
+        "bias": "Biais de simplification des décisions",
+        "description": "La tendance à simplifier les décisions pour les rendre plus gérables."
+    },
+    {
+        "bias": "Effet de simplification des interprétations",
+        "description": "La tendance à simplifier les interprétations des événements pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des évaluations",
+        "description": "La tendance à simplifier les évaluations pour les rendre plus cohérentes et faciles à comprendre."
+    },
+    {
+        "bias": "Effet de simplification des préjugés",
+        "description": "La tendance à simplifier les préjugés pour les rendre plus cohérents avec ses croyances."
+    },
+    {
+        "bias": "Biais de simplification des perceptions sociales",
+        "description": "La tendance à simplifier les perceptions sociales pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions temporelles",
+        "description": "La tendance à simplifier les perceptions temporelles pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions spatiales",
+        "description": "La tendance à simplifier les perceptions spatiales pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions sensorielles",
+        "description": "La tendance à simplifier les perceptions sensorielles pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions auditives",
+        "description": "La tendance à simplifier les perceptions auditives pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions visuelles",
+        "description": "La tendance à simplifier les perceptions visuelles pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions tactiles",
+        "description": "La tendance à simplifier les perceptions tactiles pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions gustatives",
+        "description": "La tendance à simplifier les perceptions gustatives pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions olfactives",
+        "description": "La tendance à simplifier les perceptions olfactives pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions kinesthésiques",
+        "description": "La tendance à simplifier les perceptions kinesthésiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions vestibulaires",
+        "description": "La tendance à simplifier les perceptions vestibulaires pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions proprioceptives",
+        "description": "La tendance à simplifier les perceptions proprioceptives pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions interoceptives",
+        "description": "La tendance à simplifier les perceptions interoceptives pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions extéroceptives",
+        "description": "La tendance à simplifier les perceptions extéroceptives pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions nociceptives",
+        "description": "La tendance à simplifier les perceptions nociceptives pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions thermoceptives",
+        "description": "La tendance à simplifier les perceptions thermoceptives pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions électromagnétiques",
+        "description": "La tendance à simplifier les perceptions électromagnétiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions mécaniques",
+        "description": "La tendance à simplifier les perceptions mécaniques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions chimiques",
+        "description": "La tendance à simplifier les perceptions chimiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions biologiques",
+        "description": "La tendance à simplifier les perceptions biologiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions sociales",
+        "description": "La tendance à simplifier les perceptions sociales pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions culturelles",
+        "description": "La tendance à simplifier les perceptions culturelles pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions historiques",
+        "description": "La tendance à simplifier les perceptions historiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions géographiques",
+        "description": "La tendance à simplifier les perceptions géographiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions économiques",
+        "description": "La tendance à simplifier les perceptions économiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions politiques",
+        "description": "La tendance à simplifier les perceptions politiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions religieuses",
+        "description": "La tendance à simplifier les perceptions religieuses pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions philosophiques",
+        "description": "La tendance à simplifier les perceptions philosophiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions artistiques",
+        "description": "La tendance à simplifier les perceptions artistiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions littéraires",
+        "description": "La tendance à simplifier les perceptions littéraires pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions scientifiques",
+        "description": "La tendance à simplifier les perceptions scientifiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions technologiques",
+        "description": "La tendance à simplifier les perceptions technologiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions écologiques",
+        "description": "La tendance à simplifier les perceptions écologiques pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions éducatives",
+        "description": "La tendance à simplifier les perceptions éducatives pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions professionnelles",
+        "description": "La tendance à simplifier les perceptions professionnelles pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions familiales",
+        "description": "La tendance à simplifier les perceptions familiales pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions amicales",
+        "description": "La tendance à simplifier les perceptions amicales pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions amoureuses",
+        "description": "La tendance à simplifier les perceptions amoureuses pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions sociales",
+        "description": "La tendance à simplifier les perceptions sociales pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions individuelles",
+        "description": "La tendance à simplifier les perceptions individuelles pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions collectives",
+        "description": "La tendance à simplifier les perceptions collectives pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions institutionnelles",
+        "description": "La tendance à simplifier les perceptions institutionnelles pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Biais de simplification des perceptions organisationnelles",
+        "description": "La tendance à simplifier les perceptions organisationnelles pour les rendre plus compréhensibles."
+    },
+    {
+        "bias": "Effet de simplification des perceptions communicationnelles",
+        "description": "La tendance à simplifier les perceptions communicationnelles pour les rendre plus compréhensibles."
+    }
+]

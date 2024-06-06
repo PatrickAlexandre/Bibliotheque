@@ -1,0 +1,66 @@
+[
+    {
+        "type": "INTJ",
+        "description": "The Architect"
+    },
+    {
+        "type": "INFJ",
+        "description": "The Advocate"
+    },
+    {
+        "type": "ENFJ",
+        "description": "The Protagonist"
+    },
+    {
+        "type": "ENTJ",
+        "description": "The Commander"
+    },
+    {
+        "type": "INTP",
+        "description": "The Logician"
+    },
+    {
+        "type": "INFP",
+        "description": "The Mediator"
+    },
+    {
+        "type": "ENFP",
+        "description": "The Campaigner"
+    },
+    {
+        "type": "ENTP",
+        "description": "The Debater"
+    },
+    {
+        "type": "ISTJ",
+        "description": "The Logistician"
+    },
+    {
+        "type": "ISFJ",
+        "description": "The Defender"
+    },
+    {
+        "type": "ESFJ",
+        "description": "The Consul"
+    },
+    {
+        "type": "ESTJ",
+        "description": "The Executive"
+    },
+    {
+        "type": "ISTP",
+        "description": "The Virtuoso"
+    },
+    {
+        "type": "ISFP",
+        "description": "The Adventurer"
+    },
+    {
+        "type": "ESFP",
+        "description": "The Entertainer"
+    },
+    {
+        "type": "ESTP",
+        "description": "The Entrepreneur"
+    }
+]

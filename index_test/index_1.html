@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧬💪 VitalQuest 🌍🏃‍♂️🎮💫 — Elevate Your Health, Embark on Epic Adventures ⧫⯎⊛⫷⫸</title>
+    <link rel="icon" type="image/png" href="img/EnerGGY.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-button.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #000;
+        }
+
+        .nav-icon {
+            font-size: 1.2rem;
+        }
+
+        .transition-color {
+            transition: color 0.5s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-800 text-white font-sans leading-normal tracking-normal">
+    <div class="container mx-auto p-4">
+        <!-- Profile Section -->
+        <div class="p-4 rounded-lg flex items-center space-x-4 bg-gray-800">
+            <img title="Cliquez ici pour remplacer votre photo de profil" src="https://i.gifer.com/6Dg.gif" id="replaceableImage" class="rounded-full w-24 mx-auto cursor-pointer border-4 border-solid border-gray-800" alt="🧬" onclick="captureImage()">
+            <video id="camera" class="hidden" autoplay></video>
+            <canvas id="canvas" class="hidden"></canvas>
+            <img src="https://placehold.co/50x50" alt="Faction logo" class="hidden w-12 h-12">
+            <div>
+                <div class="flex items-center space-x-2 mb-2">
+                    <span id="character-name" class="font-bold text-pink-500 text-lg overflow-hidden transition-color" contenteditable="true">Johanna</span>
+                    <span class="text-sm">
+                        <select id="mbti-type" class="bg-gray-800 text-white border border-gray-700 rounded px-2 py-1" onchange="changeBackgroundColorAndTextColor()">
+                            <option value="default">Select MBTI Type</option>
+                            <option value="ISTJ">🧠 L'Inspecteur ISTJ</option>
+                            <option value="ISFJ">💖 Le Protecteur ISFJ</option>
+                            <option value="INFJ">🌟 Le Conseiller INFJ</option>
+                            <option value="INTJ">🔬 Le Stratège INTJ</option>
+                            <option value="ISTP">🛠️ Le Virtuose ISTP</option>
+                            <option value="ISFP">🎨 L'Aventurier ISFP</option>
+                            <option value="INFP">🌈 Le Médiateur INFP</option>
+                            <option value="INTP">🔍 Le Logicien INTP</option>
+                            <option value="ESTP">⚡ L'Entrepreneur ESTP</option>
+                            <option value="ESFP">🎉 L'Artiste ESFP</option>
+                            <option value="ENFP">🔥 Le Champion ENFP</option>
+                            <option value="ENTP">💡 Le Visionnaire ENTP</option>
+                            <option value="ESTJ">📋 Le Directeur ESTJ</option>
+                            <option value="ESFJ">🤝 Le Consul ESFJ</option>
+                            <option value="ENFJ">🌞 Le Protagoniste ENFJ</option>
+                            <option value="ENTJ">🚀 Le Commandant ENTJ</option>
+                        </select>
+                    </span>
+                </div>
+                <!--🔋 Life Percentage  -->
+                <div id="lifePercentage" class="bg-green-500 h-6 overflow-hidden rounded" role="progressbar" style="width: 0%;"></div>
+
+                <div class="flex items-center space-x-4">
+                    <span class="text-yellow-400"><i class="fas fa-shield-alt"></i> 14565</span>
+                    <span class="flex items-center text-blue-400">
+                        <i class="fas fa-hourglass-half mr-2"></i>
+                        <span id="displayed-age">0</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="mt-4 bg-gray-900 p-2 rounded-lg flex justify-around flex-wrap">
+            <button id="character-btn" class="nav-button bg-yellow-500 text-black active">
+                <i class="fas fa-user nav-icon"></i>
+                Personnage
+            </button>
+            <button class="nav-button text-yellow-500">
+                <i class="fas fa-trophy nav-icon"></i>
+                Hauts Faits
+            </button>
+            <button class="nav-button text-yellow-500">
+                <i class="fas fa-archive nav-icon"></i>
+                Collections
+            </button>
+            <button id="pomodoro-btn" class="nav-button bg-red-500 text-white">
+                <i class="fas fa-apple-alt nav-icon"></i>
+                Pomodoro
+            </button>
+            <button id="expenses-btn" class="nav-button bg-green-500 text-white">
+                <i class="fas fa-wallet nav-icon"></i>
+                Dépenses
+            </button>
+            <button id="inventory-btn" class="nav-button bg-blue-500 text-white">
+                <i class="fas fa-boxes nav-icon"></i>
+                Inventaire
+            </button>
+            <button id="nutrition-btn" class="nav-button bg-purple-500 text-white">
+                <i class="fas fa-seedling nav-icon"></i>
+                Alimentation
+            </button>
+            <button id="scientists-btn" class="nav-button bg-teal-500 text-white">
+                <i class="fas fa-flask nav-icon"></i>
+                Scientifiques
+            </button>
+        </div>
+
+        <!-- Game Stats Section -->
+        <div id="game-stats-section" class="mt-4 bg-gray-900 p-4 rounded-lg">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="tooltip">
+                    <div class="flex items-center space-x-2 bg-gray-700 p-4 rounded">
+                        <i class="fas fa-tachometer-alt text-orange-400"></i>
+                        <span id="nap" class="text-orange-400">(NAP)</span>
+                    </div>
+                    <span class="tooltiptext">Niveau d'Activité Physique</span>
+                </div>
+                <div class="tooltip">
+                    <div class="flex items-center space-x-2 bg-gray-700 p-4 rounded">
+                        <i class="fas fa-fire text-purple-400"></i>
+                        <span id="bmr" class="text-purple-400">(BMR)</span>
+                    </div>
+                    <span class="tooltiptext">Métabolisme de Base au Repos</span>
+                </div>
+                <div class="tooltip">
+                    <div class="flex items-center space-x-2 bg-gray-700 p-4 rounded">
+                        <i class="fas fa-utensils text-yellow-500"></i>
+                        <span id="dej" class="text-yellow-500">(DEJ)</span>
+                    </div>
+                    <span class="tooltiptext">Dépense Énergétique Journalière</span>
+                </div>
+                <div class="tooltip">
+                    <div class="flex items-center space-x-2 bg-gray-700 p-4 rounded">
+                        <i class="fas fa-bed text-purple-400"></i>
+                        <span class="text-purple-400">32</span>
+                    </div>
+                    <span class="tooltiptext">Heures de Sommeil</span>
+                </div>
+                <div class="tooltip col-span-2">
+                    <div class="bg-gray-700 p-4 rounded">
+                        <div class="flex items-center space-x-2">
+                            <img src="https://placehold.co/30x30" alt="Character icon" class="rounded-full">
+                            <span class="text-yellow-400">11</span>
+                        </div>
+                        <div class="mt-2">
+                            <div class="relative w-full bg-gray-600 rounded">
+                                <div class="bg-green-500 text-xs leading-none py-1 text-center text-white rounded" style="width: 55%">55%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="tooltiptext">Niveau de Progression du Personnage</span>
+                </div>
+                <div class="tooltip">
+                    <div class="flex items-center space-x-2 bg-gray-700 p-4 rounded">
+                        <i class="fas fa-heartbeat text-green-400"></i>
+                        <span class="text-green-400">797 / 797</span>
+                    </div>
+                    <span class="tooltiptext">Points de Vie</span>
+                </div>
+                <div class="tooltip">
+                    <div class="flex items-center space-x-2 bg-gray-700 p-4 rounded">
+                        <i class="fas fa-magic text-blue-400"></i>
+                        <span class="text-blue-400">487 / 489</span>
+                    </div>
+                    <span class="tooltiptext">Points de Mana</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Bar -->
+        <div id="action-bar" class="mt-4 bg-gray-900 p-4 rounded-lg">
+            <div class="md:flex md:justify-center md:space-x-2">
+                <section id="why" class="bg-blue-100 p-4 rounded-lg md:w-1/3 md:mr-2">
+                    <h2 class="text-2xl font-bold text-blue-700 mb-2">Pourquoi Choisir Nos Services ? 🌟</h2>
+                    <p class="text-gray-800">Nous nous engageons à transformer des vies en fournissant des ressources expertes qui permettent à chacun de réaliser son plein potentiel de bien-être. Avec nous, vous faites le choix de la santé et du bonheur.</p>
+                </section>
+                <section id="how" class="bg-green-100 p-4 rounded-lg md:w-1/3 md:mx-2">
+                    <h2 class="text-2xl font-bold text-green-700 mb-2">Comment Faisons-nous cela ? 🔧</h2>
+                    <p class="text-gray-800">Nous combinons notre passion pour la technologie avec une compréhension approfondie des besoins en santé pour créer des applications intuitives et efficaces, vous permettant ainsi de naviguer facilement vers un mode de vie sain.</p>
+                </section>
+                <section id="what" class="bg-yellow-100 p-4 rounded-lg md:w-1/3 md:ml-2">
+                    <h2 class="text-2xl font-bold text-yellow-700 mb-2">Qu'Offrons-nous ? 🚀</h2>
+                    <p class="text-gray-800">Nous sommes le moteur derrière une suite d'outils numériques innovants conçus pour optimiser votre quotidien. De la gestion du temps à l'équilibre nutritionnel, nous avons tout ce dont vous avez besoin pour exceller.</p>
+                </section>
+            </div>
+            <div class="flex justify-center space-x-2">
+                <button class="bg-gray-700 p-2 rounded"><i class="fas fa-bolt"></i></button>
+                <button class="bg-gray-700 p-2 rounded"><i class="fas fa-fire"></i></button>
+                <button class="bg-gray-700 p-2 rounded"><i class="fas fa-water"></i></button>
+                <button class="bg-gray-700 p-2 rounded"><i class="fas fa-leaf"></i></button>
+                <button class="bg-gray-700 p-2 rounded"><i class="fas fa-wind"></i></button>
+            </div>
+        </div>
+
+        <!-- Inventory Section -->
+        <div id="inventory-section" class="mt-4 bg-gray-900 p-4 rounded-lg hidden">
+            <h2 class="text-lg font-bold mb-4">Inventaire</h2>
+            <div class="grid grid-cols-4 gap-4">
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/50x50" alt="Item 1" class="mb-2">
+                    <span>Item 1</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/50x50" alt="Item 2" class="mb-2">
+                    <span>Item 2</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/50x50" alt="Item 3" class="mb-2">
+                    <span>Item 3</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/50x50" alt="Item 4" class="mb-2">
+                    <span>Item 4</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nutrition Section -->
+        <div id="nutrition-section" class="mt-4 bg-gray-900 p-4 rounded-lg hidden">
+            <h2 class="text-lg font-bold mb-4">Alimentation</h2>
+            <div class="mb-4">
+                <h3 class="font-semibold">Calendrier des Semis</h3>
+                <img src="https://placehold.co/600x400" alt="Calendrier des Semis" class="w-full rounded">
+            </div>
+            <div>
+                <h3 class="font-semibold">Sous Chef</h3>
+                <button class="bg-green-500 text-white px-4 py-2 rounded flex items-center mt-2">
+                    <i class="fas fa-utensils mr-2"></i> Accéder
+                </button>
+            </div>
+        </div>
+
+        <!-- Scientists Section -->
+        <div id="scientists-section" class="mt-4 bg-gray-900 p-4 rounded-lg hidden">
+            <h2 class="text-lg font-bold mb-4">Top 20 Scientists</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Albert Einstein" class="mb-2">
+                    <span>Albert Einstein</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Isaac Newton" class="mb-2">
+                    <span>Isaac Newton</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Marie Curie" class="mb-2">
+                    <span>Marie Curie</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Galileo Galilei" class="mb-2">
+                    <span>Galileo Galilei</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Charles Darwin" class="mb-2">
+                    <span>Charles Darwin</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Nikola Tesla" class="mb-2">
+                    <span>Nikola Tesla</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Stephen Hawking" class="mb-2">
+                    <span>Stephen Hawking</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Leonardo da Vinci" class="mb-2">
+                    <span>Leonardo da Vinci</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Aristotle" class="mb-2">
+                    <span>Aristotle</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Richard Feynman" class="mb-2">
+                    <span>Richard Feynman</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Carl Sagan" class="mb-2">
+                    <span>Carl Sagan</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Alan Turing" class="mb-2">
+                    <span>Alan Turing</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Rosalind Franklin" class="mb-2">
+                    <span>Rosalind Franklin</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Niels Bohr" class="mb-2">
+                    <span>Niels Bohr</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="James Clerk Maxwell" class="mb-2">
+                    <span>James Clerk Maxwell</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Dmitri Mendeleev" class="mb-2">
+                    <span>Dmitri Mendeleev</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Gregor Mendel" class="mb-2">
+                    <span>Gregor Mendel</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Barbara McClintock" class="mb-2">
+                    <span>Barbara McClintock</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="Ada Lovelace" class="mb-2">
+                    <span>Ada Lovelace</span>
+                </div>
+                <div class="bg-gray-700 p-4 rounded">
+                    <img src="https://placehold.co/100x100" alt="George Washington Carver" class="mb-2">
+                    <span>George Washington Carver</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expenses Section -->
+        <div id="expenses-section" class="mt-4 bg-gray-900 p-4 rounded-lg hidden">
+            <h2 class="text-lg font-bold mb-4">Dépenses</h2>
+            <input type="file" id="csvFileInput" accept=".csv" class="mb-4">
+            <div class="overflow-x-auto">
+                <table id="expensesTable" class="min-w-full bg-gray-900">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 bg-gray-700 text-left text-white">Catégorie</th>
+                            <th class="py-2 px-4 bg-gray-700 text-left text-white">€ / Mois</th>
+                            <th class="py-2 px-4 bg-gray-700 text-left text-white">Dépenses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Les lignes du tableau seront insérées ici via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 👾 Energy and Life | Expectancy Calculator Modal 🕹️ -->
+        <div id="energyModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+            <div class="bg-gray-900 p-8 rounded-lg w-full max-w-2xl">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="hidden text-lg font-bold text-gray-800">Énergie, Fréquence, Vibration</h2>
+                    <div class="p-3 bg-dark text-light rounded">
+                        <p class="text-sm italic">"Si vous voulez trouver les secrets de l'univers, pensez en termes d'énergie, de fréquence et de vibration." - Nikola Tesla</p>
+                    </div>
+                    <button id="closeModalBtn" class="text-gray-400 hover:text-gray-200">&times;</button>
+                </div>
+                <form id="energyForm">
+                    <div class="flex flex-wrap -mx-2 mb-4">
+                        <div class="w-full md:w-1/2 px-2 mb-4 md:mb-0">
+                            <label for="gender" class="block text-gray-400">Gender</label>
+                            <select class="form-control block w-full bg-gray-800 text-white border border-gray-700 rounded px-3 py-2" id="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="w-full md:w-1/2 px-2">
+                            <label for="age" class="block text-gray-400">Age</label>
+                            <input type="number" class="form-control block w-full bg-gray-800 text-white border border-gray-700 rounded px-3 py-2" id="age" placeholder="Enter your age">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-2 mb-4">
+                        <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
+                            <label for="weight" class="block text-gray-400">Weight (kg)</label>
+                            <input type="number" class="form-control block w-full bg-gray-800 text-white border border-gray-700 rounded px-3 py-2" id="weight" placeholder="Enter your weight" value="62" min="2.1" max="635">
+                        </div>
+                        <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
+                            <label for="height" class="block text-gray-400">Height (cm)</label>
+                            <input type="number" class="form-control block w-full bg-gray-800 text-white border border-gray-700 rounded px-3 py-2" id="height" placeholder="Enter your height" value="165" min="54.6" max="272">
+                        </div>
+                        <div class="w-full md:w-1/3 px-2">
+                            <label for="activity" class="block text-gray-400">Activity Level</label>
+                            <input type="number" step="0.1" class="form-control block w-full bg-gray-800 text-white border border-gray-700 rounded px-3 py-2" id="activity" placeholder="Enter activity level" value="1.5" min="1.2" max="1.8">
+                        </div>
+                    </div>
+                </form>
+                <div class="mt-4">
+                    <p id="ageDisplay" class="text-gray-400 mt-2"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="modalEnergyCalculator.js"></script>
+    <script src="cameraCapture.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const characterBtn = document.getElementById('character-btn');
+            const energyModal = document.getElementById('energyModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const pomodoroBtn = document.getElementById('pomodoro-btn');
+            const expensesBtn = document.getElementById('expenses-btn');
+            const inventoryBtn = document.getElementById('inventory-btn');
+            const nutritionBtn = document.getElementById('nutrition-btn');
+            const scientistsBtn = document.getElementById('scientists-btn');
+            const gameStatsSection = document.getElementById('game-stats-section');
+            const inventorySection = document.getElementById('inventory-section');
+            const nutritionSection = document.getElementById('nutrition-section');
+            const scientistsSection = document.getElementById('scientists-section');
+            const expensesSection = document.getElementById('expenses-section');
+            const actionBar = document.getElementById('action-bar');
+
+            characterBtn.addEventListener('click', () => {
+                energyModal.classList.remove('hidden');
+                setActiveButton(characterBtn);
+            });
+
+            closeModalBtn.addEventListener('click', () => {
+                energyModal.classList.add('hidden');
+            });
+
+            pomodoroBtn.addEventListener('click', () => {
+                gameStatsSection.innerHTML = '<iframe src="https://app.flocus.com/" class="w-full h-96" frameborder="0"></iframe>';
+                inventorySection.classList.add('hidden');
+                nutritionSection.classList.add('hidden');
+                scientistsSection.classList.add('hidden');
+                actionBar.classList.remove('hidden');
+                expensesSection.classList.add('hidden');
+                setActiveButton(pomodoroBtn);
+            });
+
+            expensesBtn.addEventListener('click', () => {
+                expensesSection.classList.remove('hidden');
+                gameStatsSection.innerHTML = '';
+                inventorySection.classList.add('hidden');
+                nutritionSection.classList.add('hidden');
+                scientistsSection.classList.add('hidden');
+                actionBar.classList.remove('hidden');
+                setActiveButton(expensesBtn);
+            });
+
+            inventoryBtn.addEventListener('click', () => {
+                inventorySection.classList.remove('hidden');
+                gameStatsSection.innerHTML = '';
+                nutritionSection.classList.add('hidden');
+                scientistsSection.classList.add('hidden');
+                actionBar.classList.add('hidden');
+                expensesSection.classList.add('hidden');
+                setActiveButton(inventoryBtn);
+            });
+
+            nutritionBtn.addEventListener('click', () => {
+                nutritionSection.classList.remove('hidden');
+                gameStatsSection.innerHTML = '';
+                inventorySection.classList.add('hidden');
+                scientistsSection.classList.add('hidden');
+                actionBar.classList.remove('hidden');
+                expensesSection.classList.add('hidden');
+                setActiveButton(nutritionBtn);
+            });
+
+            scientistsBtn.addEventListener('click', () => {
+                scientistsSection.classList.remove('hidden');
+                gameStatsSection.innerHTML = '';
+                inventorySection.classList.add('hidden');
+                nutritionSection.classList.add('hidden');
+                actionBar.classList.add('hidden');
+                expensesSection.classList.add('hidden');
+                setActiveButton(scientistsBtn);
+            });
+
+            function setActiveButton(activeButton) {
+                const buttons = document.querySelectorAll('.nav-button');
+                buttons.forEach(button => {
+                    button.classList.remove('active');
+                });
+                activeButton.classList.add('active');
+            }
+
+            // Show modal on page load
+            energyModal.classList.remove('hidden');
+
+            const inputs = document.querySelectorAll('#gender, #age, #weight, #height, #activity');
+            inputs.forEach(input => {
+                input.addEventListener('input', calculateEnergy);
+            });
+
+            function calculateBMR(gender, weight, height, age) {
+                if (gender === 'male') {
+                    return (10 * weight) + (6.25 * height) - (5 * age) + 5;
+                } else {
+                    return (10 * weight) + (6.25 * height) - (5 * age) - 161;
+                }
+            }
+
+            function calculateDEJ(bmr, activityLevel) {
+                return bmr * activityLevel;
+            }
+
+            function calculateLifeExpectancyPercentage(gender, age) {
+                const lifeExpectancy = gender === 'male' ? 80.0 : 85.7;
+                const remainingLifeYears = Math.max(lifeExpectancy - age, 0);
+                return {
+                    percentage: (remainingLifeYears / lifeExpectancy) * 100,
+                    lifeExpectancy
+                };
+            }
+
+            function calculateEnergy() {
+                const gender = document.getElementById('gender').value;
+                const weight = parseFloat(document.getElementById('weight').value);
+                const height = parseFloat(document.getElementById('height').value);
+                const age = parseInt(document.getElementById('age').value, 10);
+                const activityLevel = parseFloat(document.getElementById('activity').value);
+
+                if (weight > 0 && height > 0 && age > 0 && activityLevel > 0) {
+                    const bmr = calculateBMR(gender, weight, height, age);
+                    const dej = calculateDEJ(bmr, activityLevel);
+                    document.getElementById('bmr').innerHTML = `Métabolisme de Base au Repos (BMR) ${bmr.toFixed(0)} kcal/jour`;
+                    document.getElementById('dej').innerHTML = `Dépense Énergétique Journalière (DEJ) ${dej.toFixed(0)} kcal/jour`;
+                    document.getElementById('nap').innerHTML = `Niveau d'Activité Physique (NAP) ${activityLevel.toFixed(2)}`;
+                    updateLifeExpectancy(gender, age);
+                } else {
+                    document.getElementById('bmr').innerHTML = "Please fill all fields with valid values to calculate BMR and DEJ.";
+                }
+            }
+
+            function updateLifeExpectancy(gender, age) {
+                if (age > 0) {
+                    const lifeData = calculateLifeExpectancyPercentage(gender, age);
+                    const lifePercentageFormatted = `(${lifeData.percentage.toFixed(0)}%) ${age} / ${lifeData.lifeExpectancy.toFixed(1)} years`;
+                    document.getElementById('ageDisplay').innerHTML = `Age: ${age}`;
+                    document.getElementById('lifePercentage').innerHTML = lifePercentageFormatted;
+                    document.getElementById('lifePercentage').style.width = `${lifeData.percentage.toFixed(2)}%`;
+
+                    // Update additional info section
+                    document.getElementById('displayed-age').innerHTML = age;
+                    updateAgeProgressBar(age, gender);
+                }
+            }
+
+            function updateAgeProgressBar(age, gender) {
+                const lifeExpectancy = (gender === 'male') ? 80.0 : 85.7;
+                const agePercentage = ((age / lifeExpectancy) * 100).toFixed(2);
+                const ageProgressBarContainer = document.getElementById('ageProgressBarContainer');
+                ageProgressBarContainer.innerHTML = `
+                    <div class="rounded bg-green-500 relative overflow-hidden">
+                        <div class="bg-green-700 text-black text-lg px-2 rounded" style="width: ${agePercentage}%; max-width: 100%; white-space: nowrap;">
+                            (${agePercentage}%) ${age} / ${lifeExpectancy}
+                        </div>
+                    </div>
+                `;
+            }
+
+            // CSV import logic
+            document.getElementById('csvFileInput').addEventListener('change', handleFileSelect, false);
+
+            function handleFileSelect(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const contents = e.target.result;
+                        parseCSV(contents);
+                    };
+                    reader.readAsText(file);
+                }
+            }
+
+            function parseCSV(data) {
+                const lines = data.split('\n');
+                const tableBody = document.querySelector('#expensesTable tbody');
+                tableBody.innerHTML = ''; // Clear existing table rows
+
+                for (let i = 0; i < lines.length; i++) {
+                    const row = lines[i].split('\t'); // Assuming tab-separated values
+                    if (row.length === 3) {
+                        const newRow = document.createElement('tr');
+                        for (let j = 0; j < row.length; j++) {
+                            const cell = document.createElement('td');
+                            cell.textContent = row[j];
+                            cell.className = 'py-2 px-4 border-t border-gray-700';
+                            newRow.appendChild(cell);
+                        }
+                        tableBody.appendChild(newRow);
+                    }
+                }
+            }
+        });
+
+        // Capture image from camera
+        function captureImage() {
+            const video = document.getElementById('camera');
+            const canvas = document.getElementById('canvas');
+            const replaceableImage = document.getElementById('replaceableImage');
+
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({
+                    video: true
+                }).then(function(stream) {
+                    video.srcObject = stream;
+                    video.classList.remove('hidden');
+
+                    const captureButton = document.createElement('button');
+                    captureButton.textContent = 'Capture';
+                    captureButton.classList.add('bg-blue-500', 'p-2', 'rounded', 'text-white', 'mt-2');
+                    document.body.appendChild(captureButton);
+
+                    captureButton.addEventListener('click', () => {
+                        const context = canvas.getContext('2d');
+                        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                        const imageUrl = canvas.toDataURL('image/png');
+                        replaceableImage.src = imageUrl;
+
+                        stream.getTracks().forEach(track => track.stop());
+                        video.classList.add('hidden');
+                        captureButton.remove();
+                    });
+                });
+            }
+        }
+
+        // Change background color and text color based on MBTI type
+        function changeBackgroundColorAndTextColor() {
+            const mbtiType = document.getElementById('mbti-type').value;
+            let bgColor = '';
+            let textColor = '';
+
+            switch (mbtiType) {
+                case 'ISTJ':
+                    bgColor = 'bg-gray-700';
+                    textColor = 'text-gray-400';
+                    break;
+                case 'ISFJ':
+                    bgColor = 'bg-green-700';
+                    textColor = 'text-green-400';
+                    break;
+                case 'INFJ':
+                    bgColor = 'bg-blue-700';
+                    textColor = 'text-blue-400';
+                    break;
+                case 'INTJ':
+                    bgColor = 'bg-purple-700';
+                    textColor = 'text-purple-400';
+                    break;
+                case 'ISTP':
+                    bgColor = 'bg-red-700';
+                    textColor = 'text-red-400';
+                    break;
+                case 'ISFP':
+                    bgColor = 'bg-yellow-700';
+                    textColor = 'text-yellow-400';
+                    break;
+                case 'INFP':
+                    bgColor = 'bg-pink-700';
+                    textColor = 'text-pink-400';
+                    break;
+                case 'INTP':
+                    bgColor = 'bg-indigo-700';
+                    textColor = 'text-indigo-400';
+                    break;
+                case 'ESTP':
+                    bgColor = 'bg-orange-700';
+                    textColor = 'text-orange-400';
+                    break;
+                case 'ESFP':
+                    bgColor = 'bg-teal-700';
+                    textColor = 'text-teal-400';
+                    break;
+                case 'ENFP':
+                    bgColor = 'bg-cyan-700';
+                    textColor = 'text-cyan-400';
+                    break;
+                case 'ENTP':
+                    bgColor = 'bg-lime-700';
+                    textColor = 'text-lime-400';
+                    break;
+                case 'ESTJ':
+                    bgColor = 'bg-amber-700';
+                    textColor = 'text-amber-400';
+                    break;
+                case 'ESFJ':
+                    bgColor = 'bg-rose-700';
+                    textColor = 'text-rose-400';
+                    break;
+                case 'ENFJ':
+                    bgColor = 'bg-fuchsia-700';
+                    textColor = 'text-fuchsia-400';
+                    break;
+                case 'ENTJ':
+                    bgColor = 'bg-violet-700';
+                    textColor = 'text-violet-400';
+                    break;
+                default:
+                    bgColor = 'bg-gray-800';
+                    textColor = 'text-white';
+            }
+
+            document.body.className = `${bgColor} text-white font-sans leading-normal tracking-normal`;
+            document.getElementById('character-name').className = `font-bold text-lg overflow-hidden transition-color ${textColor}`;
+        }
+    </script>
+</body>
+
+</html>
